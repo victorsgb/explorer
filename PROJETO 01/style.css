@@ -1,7 +1,31 @@
-h1 {
-  font-family: 'Inter', sans-serif;
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+#hero {
+  width: 592px;
+  margin: auto;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 49px;
+  line-height: 56px;
+  font-weight: normal;
+}
+
+h1 span {
+  font-weight: bold;
+}
+
+p {
+  color: #7D7987;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+span,
+a {
+  color: #FF9900;
 }
