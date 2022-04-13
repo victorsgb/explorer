@@ -104,31 +104,35 @@ main section button:hover {
   background-color: #56a286;
 }
 
-footer ul {
-  width: 260px;
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin: auto;
-  padding: 0;
-}
-
-footer ul {
+  padding-top: 100px;
+  list-style: none;
 
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
-  /* line-height: 28px; */
-
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  gap: 5px;
+  line-height: 28px;
 }
 
-footer ul li a {
+footer a {
   text-decoration: none;
   color: #1f1534;
 }
 
-footer ul li a:hover {
+footer a:hover {
   font-weight: bold;
+}
+
+footer a::before{
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
 }
 
 #balls {
