@@ -14,7 +14,7 @@ body {
   padding-top: 65px;
 }
 
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +22,7 @@ body {
   margin-bottom: 55px;
 }
 
-.list {
+nav ul {
   display: flex;
   gap: 48px;
   list-style: none;
@@ -35,27 +35,27 @@ a {
   text-decoration: none;
 }
 
-.list .item a {
-    opacity: 0.5;
+nav ul li a {
+  opacity: 0.5;
 }
 
-.list .item a:hover {
+nav ul li a:hover {
   font-weight: bold;
   opacity: 1;
 }
 
-.list,
-.title {
+nav ul,
+h1 {
   font-family: "Mulish", sans-serif;
 }
 
-.main {
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.title {
+h1 {
   font-size: 49px;
   line-height: 56px;
   color: #1f1534;
@@ -65,12 +65,12 @@ a {
   width: 490px;
 }
 
-.title span {
+h1 span {
   color: #89c5cc;
   font-weight: bold;
 }
 
-.subtitle {
+p {
   font-size: 14px;
   line-height: 28px;
   color: #7d7987;
@@ -78,7 +78,7 @@ a {
   margin: 40px 0;
 }
 
-.button {
+button {
   color: white;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
@@ -97,7 +97,7 @@ a {
   cursor: pointer;
 }
 
-.footer {
+footer {
   font-size: 14px;
   line-height: 28px;
 
@@ -106,12 +106,12 @@ a {
   margin-top: 80px;
 }
 
-.footer a {
+footer a {
   font-weight: bold;
 }
 
 #balls {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
