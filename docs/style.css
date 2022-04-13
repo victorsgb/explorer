@@ -130,3 +130,9 @@ footer ul li a {
 footer ul li a:hover {
   font-weight: bold;
 }
+
+#balls {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
