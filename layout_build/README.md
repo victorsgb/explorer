@@ -8,7 +8,7 @@
 
 ⏳ **Status:** Finished ✔️
 
-🔗 **[See it online](https://victorsgb.github.io/explorer/tree/stage02/layout_build/)**
+🔗 **[See it online](https://victorsgb.github.io/explorer/layout_build/)**
 
 👨‍💻 **Task:** Reinforce current HTML and CSS knowledge to write the home page of a small static website from a given [Figma project](https://www.figma.com/file/9NQlPiCroFTYBVuG5iFuap/Explorer-(Copy)).
 

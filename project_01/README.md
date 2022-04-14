@@ -8,7 +8,7 @@
 
 ⏳ **Status:** Finished ✔️
 
-🔗 **[See it online](https://victorsgb.github.io/explorer/tree/stage02/project_01/)**
+🔗 **[See it online](https://victorsgb.github.io/explorer/project_01/)**
 
 👨‍💻 **Task:** Learn the basics of HTML and CSS while building a small business static website from a [Figma project](https://www.figma.com/file/l4suENb0QZo2j7wIRAdBvI/Explorer---Projeto-01-(Copy)).
 
