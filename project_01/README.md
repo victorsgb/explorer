@@ -1,8 +1,4 @@
-# Rocketseat's Explorer Coursework         
-<img
-  src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png"
-  alt="Foguete decolando"
-/>
+# 🚀 Rocketseat's Explorer Coursework
 
 ### Stage 02 | Project 1: Introducing HTML and CSS
 
