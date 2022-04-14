@@ -12,8 +12,8 @@
 
 <p align="center">
 	<img src="https://img.shields.io/github/last-commit/victorsgb/explorer?style=plastic"/>
-	<img src="https://img.shields.io/github/repo-size/victorsgb/explorer?color=red?style=plastic"/>
-       <img src="https://img.shields.io/github/languages/count/victorsgb/explorer?color=yellow?style=plastic">
+	<img src="https://img.shields.io/github/repo-size/victorsgb/explorer?color=red&style=plastic"/>
+       <img src="https://img.shields.io/github/languages/count/victorsgb/explorer?color=yellow&style=plastic">
        <img src="https://img.shields.io/github/languages/top/victorsgb/explorer?style=plastic">
 </p>
 <h4 align="center">
