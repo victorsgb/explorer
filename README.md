@@ -22,9 +22,9 @@
 </h4>
 
 ---
-This repository is intended to present my solutions to the technical challenges posed throughout my growth as a web developer during my training in the Rocketseat's Explorer [program](https://www.rocketseat.com.br/explorer).
+This repository presents my solutions to the technical challenges posed throughout my growth as a web developer during my training in the Rocketseat's Explorer. [See its program here...](https://www.rocketseat.com.br/explorer).
 
-It is meant for recording my evolution towards becoming a Full Stack Web Developer
+It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Major projects
 
@@ -32,14 +32,19 @@ It is meant for recording my evolution towards becoming a Full Stack Web Develop
 - Stage 02 | Project 02: [Practicing concepts of HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_02/)
 - Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_build/)
 
+### 📌 Complete list of challenges and projects
+You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
+- [Stage 02](https://github.com/victorsgb/explorer/tree/stage02)
+
 ### 📌 Current Stacks practised
 <img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
 <img src="https://img.shields.io/badge/Html5-05122A?style=flat&logo=html5" alt="html5 Badge" height="25">&nbsp;
 
 ---
 ## Contact
-Please feel free to [keep in touch with me](https://www.linkedin.com/in/victorsgb/), I'm keen to learn and keen to share what I've learned so far as well!
+Please feel free to [keep in touch with me](https://www.linkedin.com/in/victorsgb/). I am keen to learn and share what I've learned so far!
 
-<a href="mailto:victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-D14836?style=flat&logo=gmail&logoColor=white" alt="Email Badge" height="25"></a>&nbsp;
 <a href="https://www.linkedin.com/in/victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge" height="25"></a>&nbsp;
+<a href="https://discordapp.com/users/651602304235077655" target="_blank"><img src="https://img.shields.io/badge/vitu%238828-05122A?style=flat&logo=discord" alt="vitu#8828" height="25"></a>&nbsp;
+<a href="mailto:victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-D14836?style=flat&logo=gmail&logoColor=white" alt="Email Badge" height="25"></a>&nbsp;
 <br clear="left"/>
