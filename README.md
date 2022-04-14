@@ -13,7 +13,6 @@
 <p align="center">
 	<img src="https://img.shields.io/github/last-commit/victorsgb/explorer?color=green?style=plastic"/>
 	<img src="https://img.shields.io/github/repo-size/victorsgb/explorer?color=green?style=plastic"/>
-	<img src="https://img.shields.io/github/languages/count/victorsgb/explorer?color=green?style=plastic"/>
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
