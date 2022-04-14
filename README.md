@@ -14,7 +14,6 @@
 	<img src="https://img.shields.io/github/last-commit/victorsgb/explorer?color=green?style=plastic"/>
 	<img src="https://img.shields.io/github/repo-size/victorsgb/explorer?color=green?style=plastic"/>
 	<img src="https://img.shields.io/github/languages/count/victorsgb/explorer?color=green?style=plastic"/>
-        <img src="https://img.shields.io/github/languages/top/victorsgb/explorer?color=green?style=plastic"/>
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
@@ -28,9 +27,9 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Major projects
 
-- Stage 02 | Project 01: [Introducing HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_01/)
-- Stage 02 | Project 02: [Practicing concepts of HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_02/)
-- Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_build/)
+- Stage 02 | Project 01: [Introducing HTML and CSS](https://github.com/victorsgb/explorer/tree/stage02/project_01/)
+- Stage 02 | Project 02: [Practicing concepts of HTML and CSS](https://github.com/victorsgb/explorer/tree/stage02/project_02/)
+- Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/)
 
 ### 📌 Complete list of challenges and projects
 You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
