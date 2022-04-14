@@ -30,7 +30,7 @@ It is meant for recording my evolution towards becoming a Full Stack Web Develop
 
 - Stage 02 | Project 01: [Introducing HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_01/)
 - Stage 02 | Project 02: [Practicing concepts of HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_02/)
-- Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_creation)
+- Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_build/)
 
 ### 📌 Current Stacks practised
 <img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
