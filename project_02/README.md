@@ -8,7 +8,11 @@
 
 ⏳ **Status:** Finished ✔️
 
+<<<<<<< HEAD
 🔗 **[See it online](https://victorsgb.github.io/explorer/tree/stage02/project_02/)**
+=======
+🔗 **[See it online](https://victorsgb.github.io/explorer/project_02/)**
+>>>>>>> stage02
 
 👨‍💻 **Task:** Learn HTML semantic and CSS' Box Model and Flexbox while building another small business static website from a [Figma project](https://www.figma.com/file/TVoxYQMi46aenMqMdvEYRW/Explorer---Projeto-02-(Copy)).
 
