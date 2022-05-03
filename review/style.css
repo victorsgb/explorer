@@ -1,0 +1,72 @@
+body {
+    font-family: 'Radio Canada', sans-serif;
+    background: linear-gradient(180deg, white 15.08%, #AAAAff66 100%);
+    height: 100vh;
+    margin: 0;
+}
+
+body header {
+    background-color: #AAAAff;
+    padding: 5px 0;
+    background: linear-gradient(45deg, #AAAAff 15.08%, #AAAAff55 100%);
+}
+
+body header h1 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: bold;
+}
+
+body main {
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+body main section {
+    background-color: #AAAAff33;
+    border: solid #AAAAff11 1px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+body main section h2 {
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: bold;
+}
+
+body main section h3 {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: regular;
+}
+
+body main #part-1 ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+body main #part-1 ul li button {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 6px;
+
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: regular;
+}
+
+body main #part-1 ul li button:hover {
+    background-color: #AAAAff;
+}
+
+body main section .thin-line {
+    border: solid gray 0.5px;
+}
