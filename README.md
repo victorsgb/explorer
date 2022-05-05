@@ -28,7 +28,7 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Major projects
 
-- Stage 02 | Project 03: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
+- Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
 - Stage 02 | Project 02: [Practicing concepts of HTML and CSS](https://github.com/victorsgb/explorer/tree/stage02/project_02/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_02/)**
 - Stage 02 | Project 01: [Introducing HTML and CSS](https://github.com/victorsgb/explorer/tree/stage02/project_01/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_01/)**
 
