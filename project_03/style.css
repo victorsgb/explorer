@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+body::before {
+    content: 'abc';
+    width: 100%;
+    height: 368px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #121214;
+}
+
+body .page {
+    margin: 0 auto;
+    width: 736px;
+}
+
+.page header {
+    width: 319px;
+    margin-top: 80px;
+    margin-bottom: 42px;
+}
+
+header h1,
+.page form fieldset legend,
+.page .button-box .button {
+    font-family: 'Archivo', sans-serif;
+
+}
+
+h1 {
+    color: #fafafc;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+
+    margin-bottom: 24px;
+}
+
+header p, 
+form .input-wrapper, 
+.input-wrapper input, 
+.input-wrapper textarea,
+.input-wrapper select,
+form .checkbox-wrapper {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+p {
+    color: #42d3ff;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: regular;
+}
+
+form {
+    background-color: #fafafc;
+    border-radius: 8px 8px 0px 0;
+    height: 100%;
+    padding: 64px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+form fieldset {
+    border: none;
+}
+
+fieldset legend {
+    color: #32264d;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+
+    width: 100%;
+    border-bottom: solid #e6e6f0 1px;
+    padding-bottom: 16px;
+}
+
+fieldset .fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.fieldset-wrapper .input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    color: #4E4958;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: regular;
+
+    padding-bottom: 8px;
+}
+
+.input-wrapper label span {
+    color: #59585e;
+    font-size: 12px;
+    line-height: 20px;
+
+    padding-left: 12px;
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+    background-color: #FAFAFC;
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    height: 56px;
+    padding: 0 24px;
+
+    color: #59585e;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+textarea {
+    padding: 24px;
+    height: 168px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+}
+
+.fieldset-wrapper .col-3 {
+    display: flex;
+    gap: 20px;
+}
+
+.col-3 > div:nth-child(1) {
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    color: #4E4958;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: regular;
+
+    display: flex;
+    gap: 16px;
+}
+
+.checkbox-wrapper input {
+    opacity: 0;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+}
+
+.checkbox-wrapper label::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border: solid 1px #e6e6f0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: top 50% right 50%;
+}
+
+.checkbox-wrapper input:focus + label::before {
+    background-color: white;
+    outline: solid 2px #121214;
+}
+
+.input-wrapper input:focus,
+.input-wrapper textarea:focus,
+.input-wrapper select:focus {
+    background-color: white;
+    outline: 2px solid #121214;
+}
+
+.page .button-box {
+    height: 136px;
+    border-top: solid 1px #D6D6D6;
+    background-color: #F0F0F4;
+
+    border-radius: 0 0 8px 8px;
+
+    padding: 40px 64px;
+    margin-bottom: 100px;
+
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.button-box .button {
+    height: 56px;
+    width: 608px;
+    background: #42d3ff;
+    border: solid 2px #42d3ff;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+.button:hover {
+    background: white;
+    border: solid 2px #42d3ff;
+
+    color: #42d3ff;
+}
