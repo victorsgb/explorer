@@ -28,9 +28,10 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Major projects
 
-- Stage 03 | Project 04: [Introducing to responsivity](https://github.com/victorsgb/explorer/tree/stage03/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
-- Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/stage03/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
+- Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/stage03/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
+- Stage 03 | Project 04: [Introduction to responsivity](https://github.com/victorsgb/explorer/tree/stage03/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
 - Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
+- Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/stage03/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
 
 ### 📌 Complete list of challenges and projects
 You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
