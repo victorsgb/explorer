@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-header-primary: linear-gradient(45deg, #8E9AAF, #8E9AAFaa);
+    --bg-header-primary-inverted: linear-gradient(135deg, #8E9AAF, #8E9AAFaa);
+
+    --bg-header-secondary: linear-gradient(75deg, #CBC0D3aa, #CBC0D3);
+    --bg-header-tertiary: #EFF1FF;
+
+    --bg-main-primary: #EFF1FF;
+    --bg-main-secondary: #FEEAFA;
+
+    --fc-header: #FFFFFF;
+    --fc-main-primary: #23053A;
+    --fc-main-secondary: #4A4E69;
+}
+
+body {
+    /* max-width: 83%; */
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+body header {
+    background: #FF000055;
+}
+
+body header .header-background-1 {
+    background: var(--bg-header-primary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 50%;
+}
+
+body header .header-background-2 {
+    background-color: var(--bg-header-tertiary);
+
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+header h1,
+main .img-wrapper .img-content label {
+    font-family: 'Staatliches', cursive;
+}
+
+header h2,
+footer p,
+footer a {
+    font-family: 'Palanquin', sans-serif;
+}
+
+header img {
+    margin: 3.2rem auto 3.2rem;
+    animation: grow-from-center 700ms;
+}
+
+header h1 {
+    background: var(--bg-header-secondary);
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 2.9rem;
+
+    color: var(--fc-header);
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    animation: show-up-from-left 1s backwards;
+}
+
+header h2 {
+    color: var(--fc-main-primary);
+    font-size: 2.0rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+
+    height: 100%;
+    width: 32.0rem;
+    padding-top: 1.4rem;
+    padding-bottom: 6.3rem;
+
+    animation: show-up-from-top 1s 1s backwards;
+}
+
+body main {
+    background-color: var(--bg-main-primary);
+}
+
+main .img-wrapper {
+    width: 63%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+main .img-wrapper .img-content {
+    transition: all 200ms;
+}
+
+main .img-content:hover {
+    transform: scale(1.05);
+}
+
+.img-wrapper .img-content {
+    position: relative;
+}
+
+.img-wrapper .img-content img {
+    width: 100%;
+    animation: show-up-from-bottom 700ms backwards;
+}
+
+.img-wrapper .img-content label {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    color: var(--fc-main-secondary);
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+
+
+    background-color: var(--bg-main-secondary);
+    border-radius: 2.0rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+
+    animation: show-up-from-top 700ms 350ms backwards;
+}
+
+body footer {
+    background-color: var(--bg-main-primary);
+
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
+footer p,
+footer a {
+    color: var(--bg-header-tertiary);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    animation: show-up-from-top 1s 1s backwards;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media (min-width: 1000px) {
+
+    body header {
+        grid-area: header;
+    }
+    
+    body header .header-background-2 {
+        background: var(--bg-header-primary-inverted);
+    }
+    
+    .header-background-2 h2 {
+        color: var(--fc-header);
+    }
+
+    body main {
+        grid-area: main;
+        /* padding: 9.8rem; */
+        padding-top: 6.4rem;
+        padding-left: 9.8rem;
+        padding-right: 8.1rem;
+        padding-bottom: 5.0rem;
+    }
+
+    main .img-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    body footer {
+        grid-area: footer;
+        padding-top: 0;
+    }
+
+    footer p,
+    footer a {
+        color: var(--fc-main-secondary);
+    }
+
+    footer a:hover {
+        color: var(--fc-main-primary);
+    }
+
+    body {
+        margin: 0 auto;
+        max-height: 720px;
+        max-width: 1280px;
+
+        height: 100vh;
+        width: 100vw;
+        
+        display: grid;
+        grid-template-columns: 37.7rem 1fr;
+        grid-template-rows: 1fr 6.0rem;
+        grid-template-areas:
+        "header main"
+        "header footer";
+    }
+
+    .img-wrapper {
+        width: 100%;
+        padding-bottom: 75%;
+    }
+
+    .img-wrapper .img-content {
+        max-height: 35.0rem;
+        max-width: 22.0rem;
+    }
+
+    .img-wrapper .img-content:nth-child(1) {
+        grid-area: A;
+    }
+    .img-wrapper .img-content:nth-child(2) {
+        grid-area: B;
+    }
+    .img-wrapper .img-content:nth-child(3) {
+        grid-area: C;
+    }
+    .img-wrapper .img-content:nth-child(4) {
+        grid-area: D;
+    }
+    .img-wrapper .img-content:nth-child(5) {
+        grid-area: E;
+    }
+    .img-wrapper .img-content:nth-child(6) {
+        grid-area: F;
+    }
+
+    body main .img-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "A B E" 
+        "D B F"
+        "D C F";
+
+        margin: 0;
+        max-height: 532px;
+        max-width: 724px;
+        justify-content: stretch;
+        align-items: stretch;
+        gap: 3.2rem;
+    }
+}
+
+@keyframes show-up-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3.2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
+
+@keyframes show-up-from-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.8rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }   
+}
+
+@keyframes show-up-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow-from-center {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

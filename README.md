@@ -18,7 +18,7 @@
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
-       <p style="color:#381480"> ██▁▁▁▁▁▁▁▁ &nbsp;20% </p>
+       <p> ███▁▁▁▁▁▁▁ &nbsp;30% </p>
 </h4>
 
 ---
@@ -28,6 +28,7 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Major projects
 
+- Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/stage03/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
 - Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/stage03/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
 - Stage 03 | Project 04: [Introduction to responsivity](https://github.com/victorsgb/explorer/tree/stage03/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
 - Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
@@ -35,8 +36,9 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Complete list of challenges and projects
 You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
-- [Stage 03](https://github.com/victorsgb/explorer/tree/stage03)
-- [Stage 02](https://github.com/victorsgb/explorer/tree/stage02)
+> [Stage 03](https://github.com/victorsgb/explorer/tree/stage03) - Forms, responsivity, CSS Flexbox and Grid
+
+> [Stage 02](https://github.com/victorsgb/explorer/tree/stage02) - Introduction to HTML and CSS
 
 ### 📌 Current Stacks practised
 <img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
