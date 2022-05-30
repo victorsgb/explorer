@@ -18,7 +18,7 @@
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
-       <p> ███▁▁▁▁▁▁▁ &nbsp;30% </p>
+       <p> ███▁▁▁▁▁▁▁ &nbsp;37% </p>
 </h4>
 
 ---
@@ -36,11 +36,14 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 
 ### 📌 Complete list of challenges and projects
 You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
+> [Stage 04](https://github.com/victorsgb/explorer/tree/stage04) - Programming logic and JavaScript 
+
 > [Stage 03](https://github.com/victorsgb/explorer/tree/stage03) - Forms, responsivity, CSS Flexbox and Grid
 
 > [Stage 02](https://github.com/victorsgb/explorer/tree/stage02) - Introduction to HTML and CSS
 
 ### 📌 Current Stacks practised
+<img src="https://img.shields.io/badge/JavaScript-05122A?style=flat&logo=javascript" alt="JavaScript Badge" height="25">&nbsp;
 <img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
 <img src="https://img.shields.io/badge/Html5-05122A?style=flat&logo=html5" alt="html5 Badge" height="25">&nbsp;
 
