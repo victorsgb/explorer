@@ -1,5 +1,5 @@
 <h1 align="center">
-	Rocketseat's Explorer Coursework
+	Rocketseat's Explorer coursework
         <img
         src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png"
         alt="Foguete decolando"
@@ -7,7 +7,7 @@
 </h1>
 
 <h3 align="center">
-	Repo for managing my projects and studies in the context of Rocketseat's Explorer course
+	Repository for managing my projects and studies in Rockeseat's Explorer coursework.
 </h3>
 
 <p align="center">
@@ -22,11 +22,11 @@
 </h4>
 
 ---
-This repository presents my solutions to the technical challenges posed throughout my growth as a web developer during my training in the Rocketseat's Explorer. [See its program here...](https://www.rocketseat.com.br/explorer).
+This repository presents my solutions to the technical challenges I faced while training as a web developer in Rocketseat Explorer.  [You can learn more about Rocketseat itself and view the syllabus for this course by following this link.](https://www.rocketseat.com.br/explorer).
 
-It is for recording my evolution towards becoming a Full Stack Web Developer.
+The repository you see is primarily intended to record my development into a full stack web developer!
 
-### 📌 Major projects
+### 📌 Important projects
 
 - Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/stage03/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
 - Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/stage03/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
@@ -34,26 +34,28 @@ It is for recording my evolution towards becoming a Full Stack Web Developer.
 - Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
 - Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/stage03/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
 
-### 📌 Complete list of challenges and projects
-You can also view the complete list of challenges and projects practised along the course in the branches below, where each branch refers to a different Stage of the course:
+### 📌 Full list of challenges and projects
+You can also see the full list of challenges and projects that will be worked on throughout the course in the Git branches below, where each branch refers to a different phase of the course:
+> [Stage 05](https://github.com/victorsgb/explorer/tree/stage05) - Programming with HTML, CSS, and JavaScript 
+>
 > [Stage 04](https://github.com/victorsgb/explorer/tree/stage04) - Programming logic with JavaScript 
-
+>
 > [Stage 03](https://github.com/victorsgb/explorer/tree/stage03) - Forms, responsivity, CSS Flexbox and Grid
-
+>
 > [Stage 02](https://github.com/victorsgb/explorer/tree/stage02) - Introduction to HTML and CSS
 
-### 📌 Current Stacks practised
+### 📌 Stacks practised
 <img src="https://img.shields.io/badge/JavaScript-05122A?style=flat&logo=javascript" alt="JavaScript Badge" height="25">&nbsp;
 <img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
 <img src="https://img.shields.io/badge/Html5-05122A?style=flat&logo=html5" alt="html5 Badge" height="25">&nbsp;
 
 ---
 ## Contact
-Please feel free to [keep in touch with me](https://www.linkedin.com/in/victorsgb/). I am keen to learn and share what I've learned so far!
+Feel free to stay in touch with me. I would be very happy to hear from you! Also, I am very interested in learning and sharing what I have learned so far!
 
 <a href="https://www.linkedin.com/in/victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge" height="25"></a>&nbsp;
-<a href="https://discordapp.com/users/651602304235077655" target="_blank"><img src="https://img.shields.io/badge/vitu%238828-05122A?style=flat&logo=discord" alt="vitu#8828" height="25"></a>&nbsp;
 <a href="mailto:victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-D14836?style=flat&logo=gmail&logoColor=white" alt="Email Badge" height="25"></a>&nbsp;
+<a href="https://github.com/victorsgb/victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-1C1622?style=flat&logo=github&logoColor=white" alt="Github Badge" height="25"></a>
 <br clear="left"/>
 
 README.md made with the assistance of [Readme Creator](https://readmecreator.herokuapp.com/)

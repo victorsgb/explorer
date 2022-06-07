@@ -10,7 +10,7 @@
 
     --ff-primary: 'Lato', sans-serif;
 
-    --color-tone: 200;
+    --color-tone: 80;
     --bg-primary-light: hsl(var(--color-tone), 80%, 93%);
     --bg-primary-medium: hsl(var(--color-tone), 70%, 86%);
     --bg-primary-dark: hsl(var(--color-tone), 50%, 15%);
@@ -204,13 +204,10 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     background-image:
-         -webkit-linear-gradient(-45deg, 
-                                 transparent 33%, rgba(0, 0, 0, .1) 33%, 
-                                 rgba(0,0, 0, .1) 66%, transparent 66%),
          -webkit-linear-gradient(top, 
                                  rgba(255, 255, 255, .25), 
                                  rgba(0, 0, 0, .25)),
-         -webkit-linear-gradient(left, var(--bg-primary-dark), var(--bg-primary-medium));
+         -webkit-linear-gradient(left, var(--fc-primary-dark), var(--fc-primary-hover));
   
       border-radius: 999px; 
       background-size: 35px 20px, 100% 100%, 100% 100%;
@@ -239,7 +236,7 @@ progress::-webkit-progress-bar {
 main section {
     display: grid;
     grid-template-columns: 3.0rem 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 3.0rem 1fr;
     grid-template-areas: "section-icon section-title"
     "section-content section-content";
     align-items: center;
@@ -386,7 +383,7 @@ footer a:hover {
 
 main #stages-list {
     grid-template-columns: 3.0rem 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 4.0rem auto;
     grid-template-areas: "section-icon section-title"
     "section-description section-description"
     "section-content section-content";
@@ -414,7 +411,7 @@ main #contact p {
 
 main #stacks {
     grid-template-columns: 3.0rem 1fr;
-    grid-template-rows: 3.0rem 1fr;
+    grid-template-rows: 4.0rem 1fr;
     grid-template-areas: "section-icon section-title"
     "section-content section-content";
 }
