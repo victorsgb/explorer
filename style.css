@@ -471,15 +471,14 @@ main #whats-next p {
     grid-area: section-description;
 }
 
-main #whats-next .chart {
+main #whats-next #chart {
     grid-area: section-content;
 }
 
-main #whats-next .chart img {
+main #whats-next #chart img {
     width: 100%;
     height: 100%;
     filter:hue-rotate(calc(var(--color-angle) * 1deg));
-
 }
 
 main #whats-next:hover img {
