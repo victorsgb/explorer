@@ -10,16 +10,18 @@
 
     --ff-primary: 'Lato', sans-serif;
 
-    --color-tone: 80;
-    --bg-primary-light: hsl(var(--color-tone), 80%, 93%);
-    --bg-primary-medium: hsl(var(--color-tone), 70%, 86%);
-    --bg-primary-dark: hsl(var(--color-tone), 50%, 15%);
-    --bg-primary-dark-transparent: hsla(var(--color-tone), 50%, 15%, 0.2);
+    --color-angle: 80;
+    --bg-primary-light: hsl(var(--color-angle), 80%, 93%);
+    --bg-primary-medium: hsl(var(--color-angle), 70%, 86%);
+    --bg-primary-dark: hsl(var(--color-angle), 50%, 15%);
+    --bg-primary-dark-transparent: hsla(var(--color-angle), 50%, 15%, 0.2);
+    --bg-primary-dark-unavailable: hsla(var(--color-angle), 50%, 15%, 0.4);
     
-    --bg-secondary-light: hsl(var(--color-tone), 80%, 100%);
+    --bg-secondary-light: hsl(var(--color-angle), 80%, 100%);
 
-    --fc-primary-dark: hsl(var(--color-tone), 50%, 15%);
-    --fc-primary-hover: hsl(var(--color-tone), 100%, 30%);
+    --fc-primary-dark: hsl(var(--color-angle), 50%, 15%);
+    --fc-primary-dark-unavailable: hsl(var(--color-angle), 50%, 25%);
+    --fc-primary-hover: hsl(var(--color-angle), 100%, 30%);
 }
 
 body {
@@ -43,6 +45,7 @@ main {
 }
 
 @media (min-width: 720px) {
+    
     main {
         display: grid;
         grid-template-areas:
@@ -91,11 +94,13 @@ main {
 }
 
 @media (max-width: 400px) {
+
     #stacks .stack-badges {
         grid-area: section-content;
         
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
     }
 }
 
@@ -165,15 +170,23 @@ header h2 {
 header p {
     text-align: center;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
-header p img {
-    margin-bottom: 0.5rem;
-}
+@media (max-width: 400px) {
+    header p {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-header p img + img {
-    margin-left: 0.5rem;
+    header p img {
+        justify-self: center;
+        align-self: center;
+    }
 }
 
 header h3 {
@@ -210,26 +223,6 @@ progress[value]::-webkit-progress-value {
       border-radius: 999px; 
       background-size: 35px 20px, 100% 100%, 100% 100%;
   }
-
-/* 
-header progress {
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 2.4rem;
-
-    border: none;
-    background: var(--bg-primary-light);
-
-    color: lightblue;
-}
-
-progress::-webkit-progress-value {
-    background: var(--bg-primary-dark);
-}
-  
-progress::-webkit-progress-bar {
-    background: var(--bg-primary-dark-transparent);
-} */
 
 main section {
     display: grid;
@@ -275,7 +268,6 @@ main section h2 {
     font-size: 2.0rem;
     line-height: 3.0rem;
     font-weight: 700;
-    /* text-decoration: underline; */
 }
 
 main section ul {
@@ -284,9 +276,7 @@ main section ul {
 
     height: 100%;
     width: 100%;
-}
 
-main section ul {
     list-style: none;
 
     display: grid;
@@ -329,9 +319,11 @@ main section ul li p {
     line-height: 2.4rem;
     font-weight: 700;
     text-align: center;
+
+    min-height: 4.8rem;
 }
 
-main section ul li a {
+main section ul li .available {
     color: var(--fc-primary-dark);
     font-size: 1.6rem;
     line-height: 2.4rem;
@@ -343,7 +335,19 @@ main section ul li a {
     border-radius: 8px;
 }
 
-main section ul li a:hover {
+main section ul li .unavailable {
+    color: var(--fc-primary-dark-unavailable);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration:line-through;
+
+    background-color: var(--bg-primary-dark-unavailable);
+    border-radius: 8px;
+}
+
+main section ul li .available:hover {
     background-color: var(--bg-primary-dark);
     color: var(--bg-primary-light);
 }
@@ -388,7 +392,8 @@ main #stages-list {
 }
 
 #stages-list p,
-main #contact p {
+main #contact p,
+main #whats-next p {
     grid-area: section-description;
 
     font-size: 1.6rem;
@@ -415,10 +420,17 @@ main #stacks {
 }
 
 main #stacks .stack-badges {
+    grid-area: section-content;
+
     display: flex;
     gap: 1.6rem;
     align-items: center;
 }
+/* 
+.stack-badges {
+    width: 100%;
+    height: 100%;
+} */
 
 main #contact {
     grid-template-columns: 3.0rem 1fr;
@@ -445,6 +457,33 @@ main #contact .contact-badges {
 
     display: flex;
     gap: 1.0rem;
+}
+
+main #whats-next {
+    grid-template-columns: 3.0rem 1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.8fr;
+    grid-template-areas: "section-icon section-title"
+    "section-description section-description"
+    "section-content section-content";
+}
+
+main #whats-next p {
+    grid-area: section-description;
+}
+
+main #whats-next .chart {
+    grid-area: section-content;
+}
+
+main #whats-next .chart img {
+    width: 100%;
+    height: 100%;
+    filter:hue-rotate(calc(var(--color-angle) * 1deg));
+
+}
+
+main #whats-next:hover img {
+    filter:grayscale(1);
 }
 
 footer {
