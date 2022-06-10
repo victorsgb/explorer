@@ -6,7 +6,7 @@ from matplotlib.dates import DateFormatter
 from datetime import date
 
 text_color = "#550000"
-background_color = "#ffdddd11"
+background_color = "#ffdddd00"
 marker_color = "#330000"
 grid_color = "#550000"
 
@@ -81,5 +81,7 @@ plt.ylabel('Progress', color=text_color)
 # plt.axis("off")
 plt.tight_layout()
 
-plt.show()
-plt
+plt.savefig("chart.png", dpi=300)
+
+# plt.show()
+# plt
