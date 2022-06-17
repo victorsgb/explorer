@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --color-angle: 194;
+}
+
+.in-light-mode {
+
+    --bg-body: hsl(var(--color-angle), 80%, 97%);
+    
+    --fc-timer: hsl(var(--color-angle), 6%, 21%);
+    --bg-clock: hsl(var(--color-angle), 40%, 90%);
+
+    --bg-control: hsl(var(--color-angle), 0%, 70%);
+    --bg-control-shine: hsl(var(--color-angle), 6%, 60%);
+    --bg-control-icon: hsl(var(--color-angle), 6%, 21%);
+    --bg-control-border: hsl(var(--color-angle), 6%, 21%);
+    --bg-control-shine-disabled: hsl(var(--color-angle), 6%, 90%);
+    --bg-control-icon-disabled: hsl(var(--color-angle), 6%, 61%);
+    --bg-control-border-disabled: hsl(var(--color-angle), 6%, 61%);
+    
+    --bg-card: hsl(var(--color-angle), 9%, 89%);
+    --bg-card-icon: hsl(var(--color-angle), 6%, 21%);
+    --bg-card-hover: hsl(var(--color-angle), 97%, 31%);
+
+    --bg-card-selected: hsl(var(--color-angle), 97%, 31%);
+    --bg-card-icon-selected: hsl(var(--color-angle), 0%, 97%);
+}
+
+.in-dark-mode {
+
+    --bg-body: hsl(var(--color-angle), 20%, 7%);
+    
+    --fc-timer: hsl(var(--color-angle), 0%, 79%);
+    --bg-clock: hsl(var(--color-angle), 20%, 17%);
+
+    --bg-control: hsl(var(--color-angle), 0%, 70%);
+    --bg-control-shine: hsl(var(--color-angle), 6%, 60%);
+    --bg-control-icon: hsl(var(--color-angle), 6%, 21%);
+    --bg-control-border: hsl(var(--color-angle), 6%, 21%);
+    --bg-control-shine-disabled: hsl(var(--color-angle), 6%, 60%);
+    --bg-control-icon-disabled: hsl(var(--color-angle), 6%, 21%);
+    --bg-control-border-disabled: hsl(var(--color-angle), 6%, 21%);
+
+    --bg-card: hsl(var(--color-angle), 6%, 17%);
+    --bg-card-icon: hsl(var(--color-angle), 7%, 78%);
+    --bg-card-hover: hsl(var(--color-angle), 97%, 31%);
+
+    --bg-card-selected: hsl(var(--color-angle), 74%, 15%);
+    --bg-card-icon-selected: hsl(var(--color-angle), 0%, 97%);
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+header {
+    height: 10.0rem;
+    width: 100vw;
+
+    padding-right: 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body main {
+    height: 33.6rem;
+    max-width: 82.1rem;
+
+    margin: 0 auto;
+    padding: 0 3px 10rem 3px;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "clock"
+    "music";
+    gap: 4.8rem;
+}
+
+
+#clock {
+    grid-area: clock;
+    align-self: center;
+    justify-content: center;
+    max-width: 410px;
+
+    margin: 0 auto;
+}
+
+#timer {
+    height: 11.7rem;
+
+    margin: 0 auto 2.4rem;
+    
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--bg-clock);
+    border-radius: 8px;
+    width: 90%;
+}
+
+#timer span {
+    color: var(--fc-timer);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12.0rem;
+    font-weight: 700;
+
+    align-self: center;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 4.0rem;
+
+    background-color: var(--bg-clock);
+    border-radius: 999px;
+}
+
+#controls button {
+    width: 6.4rem;
+    height: 6.4rem;
+    border: 3px solid var(--bg-control-border);
+
+    border-radius:999px;
+
+    cursor: pointer;
+}
+
+header .hidden,
+#controls .hidden,
+#music .hidden {
+    display: none;
+}
+
+#music {
+    grid-area: music;
+    width: 30.8rem;
+    height: 33.6rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+#music button {   
+    width: 13.8rem;
+    height: 15.2rem;
+    border-radius: 2.4rem;
+    background-color: var(--bg-card);
+    border: 3px solid var(--bg-card);
+    padding: 2.4rem;
+
+    align-self: center;
+    justify-self: center;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+#controls button svg .cls-1 {
+    fill: var(--bg-control);
+}
+
+#controls button svg .cls-2 {
+    fill: var(--bg-control-shine);
+}
+
+#controls button svg .cls-3 {
+    fill: var(--bg-control-icon);
+}
+
+#controls .disabled,
+#controls .disabled svg .cls-1,
+#controls .disabled svg .cls-2 {
+    background-color: var(--bg-control-icon-disabled);
+    border: 3px solid var(--bg-control-border-disabled);
+    fill: var(--bg-control-icon-disabled);
+}
+
+#controls .disabled svg .cls-3 {
+    fill: var(--bg-control-shine-disabled);
+    opacity: 0.2;
+}
+
+#controls .disabled:hover,
+#controls .disabled:hover svg .cls-1,
+#controls .disabled:hover svg .cls-2 {
+    background-color: var(--bg-control-icon-disabled);
+    border: 3px solid var(--bg-control-border-disabled);
+    fill: var(--bg-control-icon-disabled);
+    cursor: default;
+}
+
+#controls .disabled:hover svg .cls-3 {
+    background-color: var(--bg-control-icon-disabled);
+    border: 3px solid var(--bg-control-icon-disabled);
+    fill: var(--bg-control-shine-disabled);
+    cursor: default;
+    opacity: 0.2;
+}
+
+#controls button:hover {
+    border: 3px solid var(--bg-card-hover);
+}
+
+#controls button:hover svg .cls-1 {
+    fill: white;
+}
+
+#controls button:hover svg .cls-3 {
+    fill: var(--bg-card-hover);
+}
+
+#music .selected {
+    background-color: var(--bg-card-selected);
+}
+
+#music .selected svg path {
+    fill: var(--bg-card-icon-selected);
+}
+
+header button svg path,
+#music button svg path {
+    fill: var(--bg-card-icon);
+}
+
+#music button:hover {
+    background-color: var(--bg-body);
+    border: 3px solid var(--bg-card-hover);
+}
+
+header button:hover svg path,
+#music button:hover svg path {
+    fill: var(--bg-card-hover);
+}
+
+#music .selected:hover {
+    border: 3px solid var(--bg-body);
+    background-color: var(--bg-card-selected);
+}
+
+#music .selected:hover svg path {
+    fill: white;
+}
+
+#music button svg {
+    margin: 0 auto;
+}
+
+#music input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+}
+  
+#music input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+}
+
+#music input[type=range]:focus {
+outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+#music input[type=range]::-ms-track {
+width: 100%;
+cursor: pointer;
+
+/* Hides the slider so custom styles can be added */
+background: transparent; 
+border-color: transparent;
+color: transparent;
+}
+
+#music input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 999px;
+    background: var(--bg-card-icon-selected);
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+#music input[type=range]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 999px;
+    background: var(--bg-card-icon-selected);
+    cursor: pointer;
+}
+
+#music input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 999px;
+    background: var(--bg-card-icon-selected);
+    cursor: pointer;
+}
+
+#music input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--bg-card-icon-selected);
+    border-radius: 5px;
+  }
+
+#music input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--bg-card-icon-selected);
+    border-radius: 5px;  
+} 
+
+#music input[type=range]::-ms-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: var(--bg-card-icon-selected);
+    border-radius: 5px;  
+} 
+
+@media (min-width: 600px) {
+    body main {
+        display: grid;
+        grid-template-areas: "clock music"
+        "clock music";
+    }
+}

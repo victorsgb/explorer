@@ -18,7 +18,7 @@
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
-       <p> ████▁▁▁▁▁▁ &nbsp;40% </p>
+       <p> █████▁▁▁▁▁ &nbsp;50% </p>
 </h4>
 
 ---
@@ -28,6 +28,7 @@ The repository you see is primarily intended to record my development into a ful
 
 ### 📌 Important projects
 
+- Stage 05 | Challenge 10: [Focus Timer with HTML, CSS and JavaScript](https://github.com/victorsgb/explorer/tree/stage05/focus_timer/) 🔗 **[see it online](https://victorsgb.github.io/explorer/focus_timer/)**
 - Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/stage03/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
 - Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/stage03/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
 - Stage 03 | Project 04: [Introduction to responsivity](https://github.com/victorsgb/explorer/tree/stage03/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
