@@ -19,7 +19,7 @@ finishing_dates = [
     date(2022, 7, 15),  # Expected to finish Stage 06
 ]
 
-accumulated_progress = [0, .2, .3, .4, .5, .6]
+accumulated_progress = [0, .17, .25, .33, .42, .5]
 
 fig, ax = plt.subplots(1, 1, dpi=300)
 
