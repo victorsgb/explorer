@@ -385,7 +385,7 @@ footer a:hover {
 
 main #stages-list {
     grid-template-columns: 3.0rem 1fr;
-    grid-template-rows: 4.0rem auto;
+    grid-template-rows: 4.0rem 1fr 1fr;
     grid-template-areas: "section-icon section-title"
     "section-description section-description"
     "section-content section-content";
@@ -457,6 +457,17 @@ main #contact .contact-badges {
 
     display: flex;
     gap: 1.0rem;
+}
+
+.stack-badges a img {
+    min-width: 6.0rem;
+    height: 2rem;
+}
+
+
+.contact-badges a img {
+    width: 7.0rem;
+    height: 2.0rem;
 }
 
 main #whats-next {
