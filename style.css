@@ -10,7 +10,7 @@
 
     --ff-primary: 'Lato', sans-serif;
 
-    --color-angle: 80;
+    --color-angle: 194;
     --bg-primary-light: hsl(var(--color-angle), 80%, 93%);
     --bg-primary-medium: hsl(var(--color-angle), 70%, 86%);
     --bg-primary-dark: hsl(var(--color-angle), 50%, 15%);
@@ -38,7 +38,6 @@ body header:hover {
     background-color: var(--bg-secondary-light);
     box-shadow: inset 0 0 2.0rem 2.0rem var(--bg-primary-light);
 }
-
 
 main {
     margin: 0 3.0rem 0 3.0rem;
@@ -108,11 +107,16 @@ main {
     main {
         display: grid;
         grid-template-areas:
-        "repo-description major-projects whats-next"
+        /* "repo-description major-projects whats-next"
         "repo-description major-projects whats-next"
         "repo-description major-projects stacks"
-        "stages-list stages-list contact";
+        "stages-list stages-list contact"; */
 
+        
+        "repo-description repo-description repo-description"
+        "major-projects stages-list whats-next"
+        "major-projects stacks contact"; 
+        
         gap: 1.0rem;
     }
 
@@ -356,13 +360,18 @@ main #repo-description {
     font-size: 1.6rem;
     line-height: 2.4rem;
     font-weight: 400;
-    text-align:justify;
+    text-align: justify;
 
     width: 100%;
 
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+}
+
+#repo-description p {
+    width: 100%;
+    justify-content: start;
 }
 
 #repo-description a,
