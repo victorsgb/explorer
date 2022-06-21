@@ -58,7 +58,7 @@ export function Timer({
             } else {
                 play();
             }
-        }, 10);
+        }, 1000);
     }
 
     const pause = function() {
