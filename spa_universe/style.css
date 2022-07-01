@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    font-family: 'Roboto', sans-serif;
+
+    --color-angle: 194;
+
+    --fc-text: hsl(var(--color-angle), 1%, 60%);
+    --fc-text-hover: hsl(var(--color-angle), 1%, 100%);
+
+    --fc-button: hsl(var(--color-angle), 1%, 60%);
+    --bg-button: hsl(var(--color-angle), 1%, 100%);
+    --fc-button-hover: hsl(var(--color-angle), 97%, 31%);
+}
+
+body {
+    background-image: url(images/mountains-universe-1.png);
+    background-size: cover;
+  
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 1em;
+}
+
+nav {
+    height: 122px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: clamp(1.0rem, 1.0rem + 1vw, 3.2rem);
+
+    align-content: center;
+    margin-left: clamp(1rem, 1rem + 0.5vw, 7.2rem);
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: var(--fc-text);
+    font-size: clamp(1rem, 1rem + 2vw, 2.4rem);
+    font-weight: 400;
+
+    text-decoration: none;
+}
+
+nav ul li a::before {
+    position: absolute;
+    content: attr(class);
+    font-weight: 700;
+    height: 0;
+    visibility: hidden;
+}
+
+nav ul li a:hover {
+    visibility: hidden;
+}
+
+nav ul li a:hover::before {
+    color: var(--fc-text-hover);
+    font-weight: 700;
+    visibility: visible;   
+}
+
+main {
+    margin: 0 auto;
+}
+
+#app h1,
+#app h1 {
+    color: var(--fc-text-hover);
+    font-size: clamp(2.4rem, 2.4rem + 5vw, 4.8rem);
+    line-height: clamp(3.0rem, 3.0rem + 5vw, 6.0rem);
+    font-weight: 700;
+
+    padding: 0 3.0rem;
+}
+
+#app p,
+#app p {
+    color: var(--fc-text-hover);
+    font-size: clamp(1.0rem, 1.0rem + 1vw, 1.8rem);
+    line-height: clamp(2.0rem, 2.0rem + 1vw, 2.9rem);
+    font-weight: 400;
+
+    text-align: justify;
+
+    padding: 0 3.0rem;
+}
+
+#app .home-wrapper {
+    width: 40.0rem;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+#app .home-wrapper h1 {
+    padding: 0;
+}
+
+#app .home-wrapper button {
+    width: 19.5rem;
+    height: 4.8rem;
+    border: 2px solid var(--fc-button);
+    border-radius: 5px;
+    background: none;
+
+    color: var(--bg-button);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    margin: 0 auto;
+
+    transition: all 200ms;
+}
+
+#app .home-wrapper button:hover {
+    background-color: var(--bg-button);
+    color: var(--fc-button-hover);
+}
+
+@media (min-width: 648px) {
+    
+    nav {
+        margin-left: 8.2rem
+    }
+
+    #app .universe-wrapper h1,
+    #app .universe-wrapper p,
+    #app .explore-wrapper h1,
+    #app .explore-wrapper p {
+        width: 648px;
+        margin-left: 10.2rem;
+    }
+
+    #app .home-wrapper h1 {
+        margin-top: 17.2rem;
+    }
+
+}

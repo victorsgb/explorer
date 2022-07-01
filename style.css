@@ -49,7 +49,7 @@ main {
         display: grid;
         grid-template-areas:
         "repo-description repo-description"
-        "major-projects stages-list"
+        "major-projects major-projects"
         "whats-next whats-next"
         "stacks contact";
 
@@ -65,9 +65,9 @@ main {
         grid-area: major-projects;
     }
 
-    main #stages-list {
+    /* main #stages-list {
         grid-area: stages-list;
-    }
+    } */
 
     main #whats-next {
         grid-area: whats-next;
@@ -81,7 +81,7 @@ main {
         grid-area: contact;
     }
 }
-
+/* 
 @media (max-width: 720px) {       
     #stages-list ul li a {
         min-width: 100%;
@@ -90,7 +90,7 @@ main {
     #stages-list ul li h3 {
         display: none;
     }
-}
+} */
 
 @media (max-width: 400px) {
 
@@ -114,7 +114,7 @@ main {
 
         
         "repo-description repo-description repo-description"
-        "major-projects stages-list whats-next"
+        "major-projects whats-next whats-next"
         "major-projects stacks contact"; 
         
         gap: 1.0rem;
@@ -127,10 +127,10 @@ main {
     main #major-projects {
         grid-area: major-projects;
     }
-
+/* 
     main #stages-list {
         grid-area: stages-list;
-    }
+    } */
 
     main #whats-next {
         grid-area: whats-next;
@@ -392,15 +392,15 @@ footer a:hover {
 
 }
 
-main #stages-list {
+/* main #stages-list {
     grid-template-columns: 3.0rem 1fr;
     grid-template-rows: 4.0rem 1fr 1fr;
     grid-template-areas: "section-icon section-title"
     "section-description section-description"
     "section-content section-content";
-}
+} */
 
-#stages-list p,
+/* #stages-list p, */
 main #contact p,
 main #whats-next p {
     grid-area: section-description;
@@ -411,7 +411,7 @@ main #whats-next p {
     text-align:justify;
 }
 
-#stages-list ul {
+/* #stages-list ul {
     grid-area: section-content;
 }
 
@@ -419,7 +419,7 @@ main #whats-next p {
     display: flex;
     align-items: center;
     justify-content: start;
-}
+} */
 
 main #stacks {
     grid-template-columns: 3.0rem 1fr;

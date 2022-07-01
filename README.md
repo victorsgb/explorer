@@ -28,22 +28,13 @@ The repository you see is primarily intended to record my development into a ful
 
 ### 📌 Important projects
 
-- Stage 05 | Challenge 10: [Focus Timer with HTML, CSS and JavaScript](https://github.com/victorsgb/explorer/tree/stage05/focus_timer/) 🔗 **[see it online](https://victorsgb.github.io/explorer/focus_timer/)**
-- Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/stage03/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
-- Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/stage03/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
-- Stage 03 | Project 04: [Introduction to responsivity](https://github.com/victorsgb/explorer/tree/stage03/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
-- Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/stage02/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
-- Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/stage03/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
-
-### 📌 Full list of challenges and projects
-You can also see the full list of challenges and projects that will be worked on throughout the course in the Git branches below, where each branch refers to a different phase of the course:
-> [Stage 05](https://github.com/victorsgb/explorer/tree/stage05) - Programming with HTML, CSS, and JavaScript 
->
-> [Stage 04](https://github.com/victorsgb/explorer/tree/stage04) - Programming logic with JavaScript 
->
-> [Stage 03](https://github.com/victorsgb/explorer/tree/stage03) - Forms, responsivity, CSS Flexbox and Grid
->
-> [Stage 02](https://github.com/victorsgb/explorer/tree/stage02) - Introduction to HTML and CSS
+- Stage 06 | Project 07: [Introduction to SPA](https://github.com/victorsgb/explorer/tree/main/spa_universe/) 🔗 **[see it online](https://victorsgb.github.io/explorer/spa_universe/)**
+- Stage 05 | Challenge 10: [Focus Timer with HTML, CSS and JavaScript](https://github.com/victorsgb/explorer/tree/main/focus_timer/) 🔗 **[see it online](https://victorsgb.github.io/explorer/focus_timer/)**
+- Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/main/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
+- Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/main/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
+- Stage 03 | Project 04: [Introduction to responsivity](https://github.com/victorsgb/explorer/tree/main/project_04/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_04/)**
+- Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
+- Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
 
 ### 📌 Stacks practised
 <img src="https://img.shields.io/badge/JavaScript-05122A?style=flat&logo=javascript" alt="JavaScript Badge" height="25">&nbsp;
