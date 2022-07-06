@@ -32,6 +32,8 @@ body {
 
 body header {
     border: 2px solid var(--bg-primary-light);
+
+    transition: all 600ms;
 }
 
 body header:hover {
@@ -380,7 +382,6 @@ footer a {
     color: var(--fc-primary-dark);
     font-style: italic;
     text-decoration: none;
-
 }
 
 #repo-description a:hover,
