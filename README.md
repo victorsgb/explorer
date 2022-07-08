@@ -27,8 +27,8 @@ This repository presents my solutions to the technical challenges I faced while 
 The repository you see is primarily intended to record my development into a full stack web developer!
 
 ### 📌 Important projects
-
-- Stage 06 | Project 07: [Introduction to SPA](https://github.com/victorsgb/explorer/tree/main/spa_universe/) 🔗 **[see it online](https://explorer-c1e2q7lrh-victorsgb.vercel.app/)**
+- Stage 06 | Project 08: [Introduction to API](https://github.com/victorsgb/explorer/tree/main/project_08/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_08/)**
+- Stage 06 | Project 07: [Introduction to SPA](https://github.com/victorsgb/explorer/tree/main/project_07/) 🔗 **[see it online](https://explorer-c1e2q7lrh-victorsgb.vercel.app/)**
 - Stage 05 | Challenge 10: [Focus Timer with HTML, CSS and JavaScript](https://github.com/victorsgb/explorer/tree/main/focus_timer/) 🔗 **[see it online](https://victorsgb.github.io/explorer/focus_timer/)**
 - Stage 03 | Challenge 07: [Mobile-first, CSS Grid and animations](https://github.com/victorsgb/explorer/tree/main/mobile_first/) 🔗 **[see it online](https://victorsgb.github.io/explorer/mobile_first/)**
 - Stage 03 | Project 05: [Introduction to CSS Grid](https://github.com/victorsgb/explorer/tree/main/project_05/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_05/)**
