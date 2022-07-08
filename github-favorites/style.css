@@ -10,7 +10,7 @@
     --ff-primary: 'Poppins', sans-serif;
 
     --hue: 194;
-    --text-color: hsl(var(--hue), 30%, 20%);
+    --text-color: hsl(var(--hue), 5%, 5%);
     
     --header-button-color: hsl(var(--hue), 100%, 62%);
     
@@ -134,20 +134,20 @@ thead th:last-child {
     border-top-right-radius: 4px;
 }
 
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 14px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 4px;
+}
+
 tbody tr:nth-child(odd) {
     background-color: var(--table-row-odd-color);
 }
 
 tbody tr:nth-child(even) {
     background-color: var(--table-row-even-color);
-}
-
-tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 4px;
-}
-
-tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 4px;
 }
 
 tbody td.user img {
