@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    transition: all 400ms;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Roboto Mono', monospace;
+
+    --fc-color-primary: #7C7C8A;
+    --fc-color-secondary: #FFFFFF;
+    --fc-color-hover: #065E7C;
+    --fc-color-tertiary: #4E5455;
+
+    --fc-table-header-color: #E1E1E6;
+    --fc-table-body-color: #E1E1E6;
+    --fc-table-button-color: #F75A68;
+    --fc-table-button-color-hover: #ffacb3;
+
+    --bg-color: #000000;
+    --bg-input-color: #06181C;
+    --bg-input-button-color: #065E7C;
+    --bg-input-button-color-hover: #FFFFFF;
+
+    --bg-thead-color: #043444;
+    --bg-tbody-color: #030B0D;
+    --bg-tbody-row-odd-color: #06161B77;
+    --bg-tbody-row-even-color: #06181C;
+    --bg-table-border-color: #4A808C;
+    --bg-scrool-bar-color: #4A808C;
+    --bg-scrool-bar-color-hover: #79bece;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+
+    width: 100vw;
+}
+
+body .page {
+    width: 100%;
+    padding: 2.0rem;
+    margin: 11.5rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8.7rem;
+
+}
+
+header {
+    max-width: 112.0rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-areas: "logo"
+    "input";
+    gap: 1.0rem;
+    justify-content: space-around;
+
+}
+
+header svg {
+    grid-area: logo;
+    justify-self: center;
+}
+
+header .input-wrapper {
+    width: 100%;
+
+    grid-area: input;
+    display: flex;
+    gap: 8px;
+
+    height: 4.8rem;
+}
+
+.input-wrapper input {
+    background-color: var(--bg-input-color);
+    width: 23.2rem;
+
+    border: 2px solid var(--bg-input-color);
+    border-radius: 5px;
+    padding-left: 1.0rem;
+    padding-right: 3.2rem;
+
+    font-family: var(--ff-primary);
+    color: var(--fc-color-primary);
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+
+header input:focus {
+    outline: 2px solid var(--bg-input-button-color);
+    border-radius: 9px;
+}
+
+header button:focus {
+    outline: 2px solid white;
+    border-radius: 9px;
+}
+
+*:focus {
+    outline: 0;
+}
+
+
+.input-wrapper button {
+    background-color: var(--bg-input-button-color);
+    padding: 0 1.0rem;
+
+    border: 2px solid var(--bg-input-button-color);
+    border-radius: 5px;
+
+    font-family: var(--ff-primary);
+    color: var(--fc-color-secondary);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.input-wrapper button svg {
+    align-self: center;
+}
+
+.input-wrapper button:hover {
+    color: var(--fc-color-hover);
+    background-color: var(--bg-input-button-color-hover);
+}
+
+.input-wrapper button:hover svg path {
+    fill: var(--fc-color-hover);
+}
+
+.tableone {
+    border-spacing: 0;
+    border: 1px solid var(--bg-table-border-color);
+    border-radius: 15px;
+
+    margin: 0 auto;
+}
+
+.tabletwo {
+    border-spacing: 0;
+}
+
+.tableone thead tr th:nth-child(1),
+.tabletwo tbody tr td:nth-child(1) {
+    width: clamp(100px, 100px+1vw, 350px);
+}
+
+.tableone thead tr th:nth-child(2),
+.tabletwo tbody tr td:nth-child(2) {
+    width: 100px;
+}
+
+.tableone thead tr th:nth-child(3),
+.tabletwo tbody tr td:nth-child(3) {
+    width: 100px;
+}
+
+.tableone thead tr th:nth-child(4),
+.tabletwo tbody tr td:nth-child(4) {
+    width: auto;
+}
+
+.empty-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.0rem;
+    padding: 1.2rem;
+}
+
+.empty-message h1 {
+    font-family: var(--ff-secondary);
+    color: var(--fc-color-tertiary);
+    font-size: 3.6rem;
+    font-weight: 700;
+}
+
+table thead tr {
+    background-color: var(--bg-thead-color);
+    
+    height: 6.4rem;
+
+    font-family: var(--ff-primary);
+    color: var(--fc-table-header-color);
+    font-size: 2.0rem;
+    line-height: 3.2rem;
+}
+
+.tableone thead tr th {
+    text-align: start;
+    /* padding-right: 1rem; */
+}
+
+.tableone thead tr th:first-child {
+    padding-left: 4.0rem;
+}
+
+.tableone tbody tr {
+    min-height: 10.4rem;
+}
+
+.tableone thead tr th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.tableone thead tr th:nth-child(3) {
+    border-top-right-radius: 15px;
+    padding-right: 5px;
+}
+
+.tabletwo tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.tabletwo tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+.tabletwo .empty tr {
+    background-color: var(--bg-tbody-color);
+    height: 20.8rem;
+}
+
+.tabletwo tbody .user {
+    min-height: 10.4rem;
+    padding: 0 4.0rem;
+
+    display: grid;
+    grid-template-areas: "img a";
+    align-items: center;
+    justify-content: start;
+    gap: 1.6rem;
+}
+
+.tabletwo tbody .user img {
+    grid-area: img;
+    height: 5.2rem;
+    width: 5.2rem;
+    border-radius: 50%;
+}
+
+.tabletwo tbody tr .user a {
+    grid-area: a;
+    font-family: var(--ff-primary);
+    color: var(--fc-table-body-color);
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+
+    text-decoration: none;
+}
+
+.tabletwo tbody tr .user p {
+    font-weight: 700;
+}
+
+.tabletwo tbody tr .user span {
+    font-weight: 400;
+}
+
+.tabletwo tbody tr .repositories,
+.tabletwo tbody tr .followers,
+.tabletwo tbody tr .remove button {
+    font-family: var(--ff-primary);
+    font-size: 2.0rem;
+    line-height: 3.0rem;
+}
+
+.tabletwo tbody tr .repositories,
+.tabletwo tbody tr .followers {
+    color: var(--fc-table-body-color);
+}
+
+.tabletwo tbody tr .remove button {
+    background: none;
+    border: none;
+
+    color: var(--fc-table-button-color);
+    padding-right: 1.0rem;
+
+    cursor: pointer;
+}
+
+.tabletwo .remove button:hover {
+    color: var(--fc-table-button-color-hover);
+}
+
+.tabletwo tbody tr:nth-child(odd) td {
+    background-color: var(--bg-tbody-row-odd-color);
+}
+
+.tabletwo tbody tr:nth-child(even) td {
+    background-color: var(--bg-tbody-row-even-color);
+}
+
+.tabletwo tbody tr td {
+    border-top: 1px solid var(--bg-table-border-color);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.scroll {
+    overflow:auto;
+    max-height:312px;
+    width:100%;
+    scroll-margin: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-scrool-bar-color);
+    border-radius: 1.2rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-scrool-bar-color-hover);
+}
