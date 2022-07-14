@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    transition: all 400ms;
+    /* transition: all 400ms; */
 }
 
 :root {
@@ -57,7 +57,7 @@ body {
 body .page {
     width: 100%;
     padding: 2.0rem;
-    margin: 11.5rem auto 0;
+    margin: 11.5rem auto 1rem;
 
     display: flex;
     flex-direction: column;
@@ -158,196 +158,160 @@ header button:focus {
     fill: var(--fc-color-hover);
 }
 
-.tableone {
-    border-spacing: 0;
-    border: 1px solid var(--bg-table-border-color);
-    border-radius: 15px;
-
+div.table-container {
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
     margin: 0 auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 90vw;
+
+    max-width: 65.0rem;
+}
+  
+.table-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: overlay;
+    max-height: 31.2rem;
+
+    width: 90vw;
+    max-width: 65.0rem;
+
+}
+  
+.table-content::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+  
+.table-content::-webkit-scrollbar-track {
+    border-radius: 0.3rem;
+    background: transparent;
+}
+  
+.table-content::-webkit-scrollbar-thumb {
+    background: #4A808C;
+    border-radius: 0.3rem;  
+}
+  
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    border-collapse: collapse;
+
+    width: 90vw;
+    max-width: 65.0rem;
+}
+  
+table * {
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 160%;
+    color: var(--fc-color-secondary);
+    text-decoration: none;
+}
+  
+table tr {
+    display: flex;
+}
+  
+table thead {
+    background: var(--bg-thead-color);
+
+    display: inline-block;
+    padding-top: 1.6rem;
+    height: 6.4rem;
+    width: 100%;
+
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 160%;
+}
+  
+table thead th.user {
+    min-width: 29rem;
 }
 
-.tabletwo {
-    border-spacing: 0;
+table thead th {
+    width: 100%;
+    padding: 0 3px;
 }
 
-.tableone thead tr th:nth-child(1),
-.tabletwo tbody tr td:nth-child(1) {
-    width: clamp(100px, 100px+1vw, 350px);
+table tbody tr {
+    height: 10.4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: var(--bg-tbody-color);
+    text-align: left;
 }
 
-.tableone thead tr th:nth-child(2),
-.tabletwo tbody tr td:nth-child(2) {
-    width: 100px;
+table tbody tr:nth-child(odd) {
+    background: var(--bg-tbody-row-odd-color);
+    border-top: 1px solid var(--bg-table-border-color);
 }
 
-.tableone thead tr th:nth-child(3),
-.tabletwo tbody tr td:nth-child(3) {
-    width: 100px;
+table tbody tr:nth-child(even) {
+    background: var(--bg-tbody-row-even-color);
+    border-top: 1px solid var(--bg-table-border-color);
+}
+  
+table tbody tr td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+}
+  
+table tbody tr td.user {
+    height: 10.4rem;
+    min-width: 29rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1.6rem;
 }
 
-.tableone thead tr th:nth-child(4),
-.tabletwo tbody tr td:nth-child(4) {
-    width: auto;
+table tbody tr td.user span {
+    font-weight: normal;
+}
+  
+table tbody tr td.user img {
+    height: 5.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+table tbody tr td.remove button {
+    background: none;
+    border: none;
+    color: var(--fc-table-button-color); 
+    height: fit-content;
+}
+  
+table tbody tr td.remove button:hover {
+    color: var(--fc-table-button-color-hover);    cursor: pointer;
+}
+
+table tbody tr:last-child td.user {
+    border-bottom-right-radius: 1.2rem;
 }
 
 .empty-message {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6.0rem;
-    padding: 1.2rem;
+    gap: 2rem;
 }
 
 .empty-message h1 {
     font-family: var(--ff-secondary);
-    color: var(--fc-color-tertiary);
-    font-size: 3.6rem;
-    font-weight: 700;
-}
-
-table thead tr {
-    background-color: var(--bg-thead-color);
-    
-    height: 6.4rem;
-
-    font-family: var(--ff-primary);
-    color: var(--fc-table-header-color);
-    font-size: 2.0rem;
-    line-height: 3.2rem;
-}
-
-.tableone thead tr th {
-    text-align: start;
-    /* padding-right: 1rem; */
-}
-
-.tableone thead tr th:first-child {
-    padding-left: 4.0rem;
-}
-
-.tableone tbody tr {
-    min-height: 10.4rem;
-}
-
-.tableone thead tr th:first-child {
-    border-top-left-radius: 15px;
-}
-
-.tableone thead tr th:nth-child(3) {
-    border-top-right-radius: 15px;
-    padding-right: 5px;
-}
-
-.tabletwo tbody tr:last-child td:first-child {
-    border-bottom-left-radius: 15px;
-}
-
-.tabletwo tbody tr:last-child td:last-child {
-    border-bottom-right-radius: 15px;
-}
-
-.tabletwo .empty tr {
-    background-color: var(--bg-tbody-color);
-    height: 20.8rem;
-}
-
-.tabletwo tbody .user {
-    min-height: 10.4rem;
-    padding: 0 4.0rem;
-
-    display: grid;
-    grid-template-areas: "img a";
-    align-items: center;
-    justify-content: start;
-    gap: 1.6rem;
-}
-
-.tabletwo tbody .user img {
-    grid-area: img;
-    height: 5.2rem;
-    width: 5.2rem;
-    border-radius: 50%;
-}
-
-.tabletwo tbody tr .user a {
-    grid-area: a;
-    font-family: var(--ff-primary);
-    color: var(--fc-table-body-color);
-    font-size: 2.0rem;
-    line-height: 3.0rem;
-
-    text-decoration: none;
-}
-
-.tabletwo tbody tr .user p {
-    font-weight: 700;
-}
-
-.tabletwo tbody tr .user span {
-    font-weight: 400;
-}
-
-.tabletwo tbody tr .repositories,
-.tabletwo tbody tr .followers,
-.tabletwo tbody tr .remove button {
-    font-family: var(--ff-primary);
-    font-size: 2.0rem;
-    line-height: 3.0rem;
-}
-
-.tabletwo tbody tr .repositories,
-.tabletwo tbody tr .followers {
-    color: var(--fc-table-body-color);
-}
-
-.tabletwo tbody tr .remove button {
-    background: none;
-    border: none;
-
-    color: var(--fc-table-button-color);
-    padding-right: 1.0rem;
-
-    cursor: pointer;
-}
-
-.tabletwo .remove button:hover {
-    color: var(--fc-table-button-color-hover);
-}
-
-.tabletwo tbody tr:nth-child(odd) td {
-    background-color: var(--bg-tbody-row-odd-color);
-}
-
-.tabletwo tbody tr:nth-child(even) td {
-    background-color: var(--bg-tbody-row-even-color);
-}
-
-.tabletwo tbody tr td {
-    border-top: 1px solid var(--bg-table-border-color);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.scroll {
-    overflow:auto;
-    max-height:312px;
-    width:100%;
-    scroll-margin: 10px;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    border: none;
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--bg-scrool-bar-color);
-    border-radius: 1.2rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--bg-scrool-bar-color-hover);
+    color: var(--fc-color-primary);
+    font-size: 3rem;
 }

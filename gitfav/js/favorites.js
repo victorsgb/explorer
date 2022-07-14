@@ -93,7 +93,7 @@ export class FavoritesView extends Favorites {
 
     update() {
 
-        const tbody = this.root.querySelector(".tabletwo tbody");
+        const tbody = this.root.querySelector(".table-content");
 
         if (this.entries.length == 0) {
 
