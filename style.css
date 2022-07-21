@@ -38,6 +38,11 @@ body {
 body header {
     border: 2px solid var(--bg-primary-light);
 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 3rem;
+
+
     transition: all 600ms;
 }
 
@@ -47,7 +52,9 @@ body header:hover {
 }
 
 main {
-    margin: 0 3.0rem 0 3.0rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 1000px;
 }
 
 @media (min-width: 720px) {
