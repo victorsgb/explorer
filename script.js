@@ -1,18 +1,20 @@
-const colorAngle = document.querySelector(":root")
+const hue = document.querySelector(":root")
 
-let x = 0.0;
+let x = 0.0, y = 0.0;
+let hueColor;
+let baseColor = 194;
 
-function changeColorAngle() {
+function changeHueValue() {
     setTimeout(() => {
         
-        newColor = 194 + Math.sin(x) * 40;
-        
-        colorAngle.style.setProperty("--color-angle", String(newColor));
+        hueColor = baseColor + Math.sin(x) * 40;
+
+        hue.style.setProperty("--hue", String(hueColor));
 
         // console.log(newColor);
         x += 0.1;
-        changeColorAngle();
+        changeHueValue();
     }, 100);
 }
 
-changeColorAngle();
+changeHueValue();
