@@ -26,7 +26,6 @@
     --logo-symbol: hsl(var(--hue), 100%, 15%);
     --logo-text: hsl(var(--hue), 100%, 15%);
 
-
 }
 
 body {
@@ -41,9 +40,6 @@ body header {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 3rem;
-
-
-    transition: all 600ms;
 }
 
 body header:hover {
@@ -107,11 +103,6 @@ main {
     main {
         display: grid;
         grid-template-areas:
-        /* "repo-description major-projects whats-next"
-        "repo-description major-projects whats-next"
-        "repo-description major-projects stacks"
-        "stages-list stages-list contact"; */
-
         
         "repo-description repo-description repo-description"
         "major-projects whats-next whats-next"
@@ -127,10 +118,6 @@ main {
     main #major-projects {
         grid-area: major-projects;
     }
-/* 
-    main #stages-list {
-        grid-area: stages-list;
-    } */
 
     main #whats-next {
         grid-area: whats-next;
@@ -145,9 +132,11 @@ main {
     }
 }
 
+header h1 span {
+    margin: auto 0;
+}
 
 header h1 {
-    font-size: clamp(1.6rem, 0.1rem + 2vw, 3.2rem);
     line-height: 4.8rem;
     font-weight: 700;
     text-align: center;
@@ -156,11 +145,15 @@ header h1 {
     border-top: 1px solid var(--fc-primary-dark);
     border-bottom: 1px solid var(--fc-primary-dark);
 
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
-    gap: 1.0rem;
+    /* gap: 1.0rem; */
     padding: 0.1rem;
+}
+
+header h1 svg {
+    justify-self: center;
 }
 
 header h1 svg path.symbol {
@@ -169,6 +162,35 @@ header h1 svg path.symbol {
 
 header h1 svg path {
     fill: var(--logo-text);
+}
+
+header h1 button {
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    background: none;
+    border: none;
+    border-radius: 99px;
+    margin-left: 10.0rem;
+    transition: all 200ms;
+
+    cursor: pointer;
+
+    filter:opacity(0.2);
+}
+
+header h1 button.hidden {
+    display: none;
+}
+
+header h1 button.light-mode:hover {
+    filter: drop-shadow(0 0 10px #000000);
+}
+
+header h1 button.dark-mode:hover {
+    filter: drop-shadow(0 0 10px #ffffff);
 }
 
 header h2 {
@@ -259,7 +281,7 @@ main section:hover {
     border: 2px solid var(--bg-secondary-light);
     background-color: var(--bg-secondary-light);
     box-shadow:
-    -1px -2px 15px 5px #00000055;
+    -1px -2px 15px 5px var(--bg-primary-dark-transparent);
 
     transform: translateX(1px);
     transform: translateY(2px);
@@ -401,15 +423,6 @@ footer a:hover {
 
 }
 
-/* main #stages-list {
-    grid-template-columns: 3.0rem 1fr;
-    grid-template-rows: 4.0rem 1fr 1fr;
-    grid-template-areas: "section-icon section-title"
-    "section-description section-description"
-    "section-content section-content";
-} */
-
-/* #stages-list p, */
 main #contact p,
 main #whats-next p {
     grid-area: section-description;
@@ -419,16 +432,6 @@ main #whats-next p {
     font-weight: 400;
     text-align:justify;
 }
-
-/* #stages-list ul {
-    grid-area: section-content;
-}
-
-#stages-list ul li {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-} */
 
 main #stacks {
     grid-template-columns: 3.0rem 1fr;
@@ -444,11 +447,6 @@ main #stacks .stack-badges {
     gap: 1.6rem;
     align-items: center;
 }
-/* 
-.stack-badges {
-    width: 100%;
-    height: 100%;
-} */
 
 main #contact {
     grid-template-columns: 3.0rem 1fr;
@@ -507,11 +505,22 @@ main #whats-next #chart {
 main #whats-next #chart img {
     width: 100%;
     height: 100%;
-    filter:hue-rotate(calc(var(--hue) * 1deg));
 }
 
-main #whats-next:hover img {
+.img-in-light-mode {
+    filter: hue-rotate(calc(var(--hue) * 1deg));
+}
+
+.img-in-dark-mode {
+    filter: hue-rotate(calc(var(--hue) * 1deg + 194deg)) invert(100%);
+}
+
+main #whats-next:hover .img-in-light-mode {
     filter:grayscale(1);
+}
+
+main #whats-next:hover .img-in-dark-mode {
+    filter:grayscale(1) invert(100%);
 }
 
 footer {
@@ -528,4 +537,8 @@ footer {
 footer:hover {
     background-color: var(--bg-secondary-light);
     box-shadow: inset 0 0 0.5rem 0.5rem var(--bg-primary-light);
+}
+
+svg.icon path {
+    fill: var(--fc-primary-dark);
 }
