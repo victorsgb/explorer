@@ -246,14 +246,14 @@ header progress[value] {
 progress[value]::-webkit-progress-bar {
     background-color: var(--bg-primary-light);
     border-radius: 999px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 2px 5px var(--bg-primary-dark-transparent) inset;
 }
 
 progress[value]::-webkit-progress-value {
     background-image:
          -webkit-linear-gradient(top, 
                                  rgba(255, 255, 255, .25), 
-                                 rgba(0, 0, 0, .25)),
+                                 var(--bg-primary-dark-transparent)),
          -webkit-linear-gradient(left, var(--fc-primary-dark), var(--fc-primary-hover));
   
       border-radius: 999px; 
@@ -330,10 +330,13 @@ main section ul li {
     grid-template-areas: "title title"
     "description description"
     "code deploy";
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.0rem;
+    align-items: center;
 
     border: 2px solid var(--bg-primary-medium);
     border-radius: 8px;
+    padding: 3px;
 }
 
 main section ul li:hover {
@@ -341,12 +344,25 @@ main section ul li:hover {
     background-color: var(--bg-primary-light);
 }
 
-main section ul li h3 {
+main section ul li .title {
     grid-area: title;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+}
+
+main section ul li .title object svg g path {
+    fill: red;    
+}
+
+main section ul li .title h3 {
     font-size: 1.2rem;
     line-height: 1.8rem;
     font-weight: 700;
-    text-align: center;
+    text-align: start;
 }
 
 main section ul li p {
@@ -369,6 +385,7 @@ main section ul li .available {
 
     background-color: var(--bg-primary-dark-transparent);
     border-radius: 8px;
+    padding: 0 8px;
 }
 
 main section ul li .unavailable {
@@ -381,6 +398,7 @@ main section ul li .unavailable {
 
     background-color: var(--bg-primary-dark-unavailable);
     border-radius: 8px;
+    padding: 8px;
 }
 
 main section ul li .available:hover {
