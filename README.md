@@ -18,7 +18,7 @@
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
-       <p> ███████▁▁▁▁ &nbsp;63% </p>
+       <p> ████████▁▁▁ &nbsp;73% </p>
 </h4>
 
 ---
@@ -27,6 +27,7 @@ This repository presents my solutions to the technical challenges I faced while 
 The repository you see is primarily intended to record my development into a full stack web developer!
 
 ### 📌 Important projects
+- Stage 08 | Challenge 12: [Building an API](https://github.com/victorsgb/explorer/tree/main/movies_api/)
 - Stage 06 | Challenge 11: [Consuming GitHub's API](https://github.com/victorsgb/explorer/tree/main/gitfav/) 🔗 **[see it online](https://victorsgb.github.io/explorer/gitfav/)**
 - Stage 06 | Project 07: [Introduction to SPA](https://github.com/victorsgb/explorer/tree/main/project_07/) 🔗 **[see it online](https://explorer-c1e2q7lrh-victorsgb.vercel.app/)**
 - Stage 05 | Challenge 10: [Focus Timer with HTML, CSS and JavaScript](https://github.com/victorsgb/explorer/tree/main/focus_timer/) 🔗 **[see it online](https://victorsgb.github.io/explorer/focus_timer/)**
@@ -36,11 +37,14 @@ The repository you see is primarily intended to record my development into a ful
 - Stage 02 | Challenge 04: [Applying current HTML and CSS knowledge to build a layout](https://github.com/victorsgb/explorer/tree/main/layout_build/) 🔗 **[see it online](https://victorsgb.github.io/explorer/layout_build/)**
 - Stage 03 | Project 03: [Custom form built using HTML and CSS](https://github.com/victorsgb/explorer/tree/main/project_03/) 🔗 **[see it online](https://victorsgb.github.io/explorer/project_03/)**
 
-### 📌 Stacks practised
-<img src="https://img.shields.io/badge/JavaScript-05122A?style=flat&logo=javascript" alt="JavaScript Badge" height="25">&nbsp;
-<img src="https://img.shields.io/badge/Css3-05122A?style=flat&logo=css3" alt="css3 Badge" height="25">&nbsp;
-<img src="https://img.shields.io/badge/Html5-05122A?style=flat&logo=html5" alt="html5 Badge" height="25">&nbsp;
-
+### 📌 Stacks and Tools practised
+<img src="https://simpleicons.org/icons/javascript.svg" alt="JavaScript Badge" height="25">&nbsp;
+<img src="https://simpleicons.org/icons/css3.svg" alt="css3 Badge" height="25">&nbsp;
+<img src="https://simpleicons.org/icons/html5.svg" alt="html5 Badge" height="25">&nbsp;
+<img src="https://simpleicons.org/icons/nodedotjs.svg" alt="Nodejs Badge" height="25"/>
+<img src="https://simpleicons.org/icons/insomnia.svg" alt="Insomnia Badge" height="25"/>
+<img src="https://simpleicons.org/icons/sqlite.svg" alt="SQLite Badge" height="25"/>
+<img src="https://simpleicons.org/icons/express.svg" alt="Express Badge" height="25"/>
 ---
 ## Contact
 Feel free to stay in touch with me. I would be very happy to hear from you! Also, I am very interested in learning and sharing what I have learned so far!

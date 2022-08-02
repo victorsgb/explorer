@@ -462,8 +462,9 @@ main #stacks .stack-badges {
     grid-area: section-content;
 
     display: flex;
-    gap: 1.6rem;
+    gap: 2.0rem;
     align-items: center;
+    justify-content: center;
 }
 
 main #contact {
@@ -490,18 +491,19 @@ main #contact .contact-badges {
     grid-area: section-content;
 
     display: flex;
-    gap: 1.0rem;
+    gap: 2.0rem;
+    align-items: center;
+    justify-content: center;
 }
 
-.stack-badges a img {
-    min-width: 6.0rem;
-    height: 2rem;
+.stack-badges svg path,
+.contact-badges svg path {
+    fill: var(--bg-primary-dark);
 }
 
-
-.contact-badges a img {
-    width: 7.0rem;
-    height: 2.0rem;
+.stack-badges svg path:hover,
+.contact-badges svg path:hover {
+    filter: brightness(2.5);
 }
 
 main #whats-next {
@@ -559,4 +561,34 @@ footer:hover {
 
 svg.icon path {
     fill: var(--fc-primary-dark);
+}
+
+@media (max-width: 320px) {
+    main section ul {
+        grid-area: section-content;
+        margin: 1.6rem auto 1.6rem;
+    
+        height: 100%;
+        width: 100%;
+    
+        list-style: none;
+    
+        display: grid;
+        grid-template-columns: 1fr;       
+        row-gap: 1.5rem;
+    }
+
+    main #stacks .stack-badges {
+        grid-area: section-content;
+    
+        display: grid;
+        margin-top: 1.6rem;
+        grid-template-columns:  1fr 1fr 1fr;
+        column-gap: 1.6rem;
+    }
+
+    main #stacks .stack-badges a {
+        align-self: center;
+        justify-self: center;
+    }
 }
