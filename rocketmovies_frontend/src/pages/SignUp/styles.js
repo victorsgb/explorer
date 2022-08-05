@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   > section {
     max-width: 60.7rem;
-    padding: 13.5rem 13.7rem 5.0rem;
+    padding: 8.5rem 13.7rem 4.0rem;
 
     display: flex;
     flex-direction: column;
@@ -32,12 +32,20 @@ export const Container = styled.div`
     }
   
     a {
-      margin-top: -6px;
-      font-weight: 400;
-      font-size: 1.6rem;
-      line-height: 2.1rem;
-      text-align: center;
+      
       color: ${({ theme }) => theme.COLORS.PINK_100};
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      span {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        text-align: center;
+      }
     }
   }
 `;
@@ -60,8 +68,9 @@ export const Form = styled.form`
   }
 
   > button {
-    margin-top: 1.6rem;
+    margin-top: 8px;
   }
+
 `;
 
 export const Background = styled.div`

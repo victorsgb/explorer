@@ -8,8 +8,15 @@ export const Container = styled.button`
   border-radius: 1.0rem;
   cursor: pointer;
   
-  > button {
-    width: 100;
-    color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  > svg {
+    color: ${({ theme }) => theme.COLORS.BLACK};
   }
+
 `;

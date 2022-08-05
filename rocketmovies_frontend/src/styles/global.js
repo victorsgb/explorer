@@ -19,7 +19,7 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  button, input { 
+  button, input, textarea { 
     font-family: 'Roboto Slab', serif;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     font-size: 1.4rem;
@@ -29,17 +29,39 @@ export default createGlobalStyle`
     outline: none;
 
     &::placeholder {
-      color: ${({ theme }) => theme.COLORS.GRAY_400}
+      color: ${({ theme }) => theme.COLORS.GRAY_500}
     }
   }
 
   a {
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.GRAY_500};
     text-decoration: none;
   }
 
   a:hover, button:hover {
     filter: brightness(1.1);
+  }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: ${({ theme }) => theme.COLORS.PINK_100} none;
+  }
+  
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 18px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.PINK_100};
+    border-radius: 8px;
+    border: 6px solid ${({ theme }) => theme.COLORS.BACKGROUND_800};
   }
 
 `;

@@ -13,11 +13,7 @@ export const Container = styled.div`
   border-radius: 1.0rem;
   gap: 1.6rem;
 
-  > svg {
-    color: ${({ theme }) => theme.COLORS.GRAY_500};
-  }
-
-  > input {
+  > textarea {
     width: 100%;
   } 
 `;
