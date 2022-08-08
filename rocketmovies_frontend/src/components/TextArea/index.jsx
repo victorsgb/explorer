@@ -1,8 +1,8 @@
 import { Container } from './styles';
 
-export function TextArea({...rest }){
+export function TextArea({id, ...rest }){
   return (
-    <Container>
+    <Container id={id}>
       <textarea {...rest}/>
     </Container>
   );

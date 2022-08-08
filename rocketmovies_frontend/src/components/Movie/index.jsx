@@ -1,4 +1,4 @@
-import { Container, Rating } from './style';
+import { Container, Rating } from './styles';
 
 import { FiStar } from 'react-icons/fi';
 import { Tag } from '../../components/Tag';

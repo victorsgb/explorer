@@ -26,7 +26,7 @@ export function Home(){
                 tags: [
                   {id: '1', name:'Ficção científica'},
                   {id: '2', name: 'Drama'},
-                  {id: '2', name: 'Família'}
+                  {id: '3', name: 'Família'}
                 ]
               }} />
             </li>
@@ -37,7 +37,7 @@ export function Home(){
                 tags: [
                   {id: '1', name:'Ficção científica'},
                   {id: '2', name: 'Drama'},
-                  {id: '2', name: 'Família'}
+                  {id: '3', name: 'Família'}
                 ]
               }} />
             </li>

@@ -1,5 +1,5 @@
 import { Container } from './styles';
-
+import { Link } from 'react-router-dom';
 import { Input } from '../Input';
 
 export function Header(){
@@ -10,9 +10,11 @@ export function Header(){
       <div>
         <div>
           <span>Victor Baptista</span>
-          <a href="#">sair</a>
+          <Link to='/'>sair</Link>
         </div>
-        <img src="https://github.com/victorsgb.png" alt="Imagem do usuário" />
+        <Link to='/profile'>
+          <img src="https://github.com/victorsgb.png" alt="Imagem do usuário" />
+        </Link>
       </div>
     </Container>
   );

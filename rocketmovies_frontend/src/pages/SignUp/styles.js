@@ -48,6 +48,13 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (max-width: 650px) {
+    > section {
+      padding: 13.5rem 3.0rem 5.0rem;
+    }
+  }
+
 `;
 
 export const Form = styled.form`
@@ -80,4 +87,8 @@ export const Background = styled.div`
   background: url(${ backgroundImg}) no-repeat center;
   background-size: cover;
 
+  @media (max-width: 650px) {
+    background-size: cover;
+    height: 110vh;
+  }
 `;

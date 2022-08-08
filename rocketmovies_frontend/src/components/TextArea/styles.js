@@ -15,5 +15,8 @@ export const Container = styled.div`
 
   > textarea {
     width: 100%;
+    height: 27.4rem;
+
+    resize: none;
   } 
 `;

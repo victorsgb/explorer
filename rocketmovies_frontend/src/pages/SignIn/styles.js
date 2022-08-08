@@ -40,6 +40,12 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.PINK_100};
     }
   }
+
+  @media (max-width: 650px) {
+    > section {
+      padding: 13.5rem 3.0rem 5.0rem;
+    }
+  }
 `;
 
 export const Form = styled.form`
