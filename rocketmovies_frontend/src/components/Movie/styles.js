@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+import { Link } from 'react-router-dom';
+
+export const Container = styled(Link)`
   width: 100%;
   background-color: ${({ theme }) => theme.COLORS.PINK_900};
 

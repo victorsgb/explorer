@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.button`
+import { Link } from 'react-router-dom';
+
+export const Container = styled(Link)`
   width: 100%;
   
   padding: 1.7rem 0;
@@ -21,5 +23,4 @@ export const Container = styled.button`
   > svg {
     color: ${({ theme }) => theme.COLORS.BLACK};
   }
-
 `;

@@ -33,7 +33,7 @@ export const Title = styled.div`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  button {
+  #button-create {
     max-width: 20.7rem;
   }
 
