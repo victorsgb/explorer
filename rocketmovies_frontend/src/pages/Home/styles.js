@@ -26,14 +26,14 @@ export const Title = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  h1 {
+  > h1 {
     font-weight: 400;
     font-size: 3.2rem;
     line-height: 4.2rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  #button-create {
+  > button {
     max-width: 20.7rem;
   }
 

@@ -28,12 +28,3 @@ export const Container = styled(Link)`
   }
 
 `;
-
-export const Rating = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 6px;
-
-  color: ${({ theme }) => theme.COLORS.PINK_100};
-  font-size: 1.0rem;
-`;

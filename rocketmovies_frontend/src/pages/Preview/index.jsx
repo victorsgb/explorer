@@ -3,6 +3,9 @@ import { Container, Content, TitleAndRating, Description } from './styles';
 import { Header } from '../../components/Header';
 import { FiArrowLeft, FiStar, FiClock } from 'react-icons/fi';
 import { Tag } from '../../components/Tag';
+import { Rating } from '../../components/Rating';
+
+import { Link } from 'react-router-dom';
 
 export function Preview(){
     return (
@@ -11,17 +14,12 @@ export function Preview(){
             <Content>
                 <header>
                     <FiArrowLeft size={20} />
-                    <a href='#'>Voltar</a>
+                    <Link to='/'>Voltar</Link>
                 </header>
                 <TitleAndRating>
                     <h1>Interestellar</h1>
-                    <div className="rating">
-                        <FiStar />
-                        <FiStar />
-                        <FiStar />
-                        <FiStar />
-                        <FiStar />                    
-                    </div>
+                    <Rating value={3} size={25} />
+
                 </TitleAndRating>
                 <Description>
                     <img src="https://github.com/victorsgb.png" alt="Imagem do usuário que criou a nota" />
