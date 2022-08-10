@@ -567,7 +567,7 @@ svg.icon path {
     fill: var(--fc-primary-dark);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
     main section ul {
         grid-area: section-content;
         margin: 1.6rem auto 1.6rem;
