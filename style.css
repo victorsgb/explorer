@@ -461,10 +461,14 @@ main #stacks {
 main #stacks .stack-badges {
     grid-area: section-content;
 
-    display: flex;
-    gap: 2.0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.6rem;
     align-items: center;
-    justify-content: center;
+}
+
+.stack-badges a {
+    justify-self: center;
 }
 
 main #contact {
