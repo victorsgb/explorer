@@ -41,13 +41,8 @@ class UsersController {
 
   async update(request, response) {
     const { name, email, password, new_password } = request.body;
-    const { id } = request.params;
-    
-    // Check if new password has been provided
-    if (!new_password) {
-      throw new AppError('user-error/empty-new-password');
-    }
-
+    const id = request.user.id;
+  
     // Check if ID is already present in database
     const idAlreadyInUse = await knex
       .select('id').from('users')
@@ -56,38 +51,70 @@ class UsersController {
       throw new AppError('user-error/id-not-found');
     }
 
-    // Check if email is already present in database
-    const emailAlreadyInUsePromise = await knex
-      .select(['id', 'email']).from('users')
-      .where({ email});
-
-    const emailAlreadyInUse = emailAlreadyInUsePromise
-      .filter(el => el.id !== Number(id))
-      .length;
-
-    if (emailAlreadyInUse) {
-      throw new AppError('user-error/email-in-use');
+    if (email) {
+      // Check if email is already present in database
+      const emailAlreadyInUsePromise = await knex
+        .select(['id', 'email']).from('users')
+        .where({ email});
+  
+      const emailAlreadyInUse = emailAlreadyInUsePromise
+        .filter(el => el.id !== Number(id))
+        .length;
+  
+      if (emailAlreadyInUse) {
+        throw new AppError('user-error/email-in-use');
+      }
     }
 
-    // Check if user matched its old password before updating
-    const old = await knex
-      .select('password').from('users')
-      .where({ id }).first();
+    if (email && !password) {
 
-    const passwordMatches = await compare(password, old.password);
+      const registeredEmail = await knex
+        .select('email').from('users')
+        .where({ id }).first();
 
-    if (!passwordMatches) {
-      throw new AppError('user-error/wrong-password');
+      const emailChanged = email !== registeredEmail.email;
+
+      console.log({name, email, password, new_password});
+
+      if (emailChanged) {
+        throw new AppError('user-error/email-update-trial-without-password');
+      }      
     }
 
-    // Passed all tests
-    const hashedPassword = await hash(new_password, 8);
+    // Check if new password has been provided when old password is provided
+    if (password && !new_password) {
+      throw new AppError('user-error/empty-new-password');
+    }
+
+    if (password && new_password) {
+
+      // Check if user matched its old password before updating
+      const old = await knex
+        .select('password').from('users')
+        .where({ id }).first();
+  
+      const passwordMatches = await compare(password, old.password);
+  
+      if (!passwordMatches) {
+        throw new AppError('user-error/wrong-password');
+      }
+  
+      // Passed all tests
+      const hashedPassword = await hash(new_password, 8);
+
+      await knex('users')
+        .where({ id })
+        .update({ name, email, password: hashedPassword, updated_at: knex.fn.now() });
+      
+      return response.json();
+    }
 
     await knex('users')
-      .where({ id })
-      .update({ name, email, password: hashedPassword, updated_at: knex.fn.now() });
+    .where({ id })
+    .update({ name, updated_at: knex.fn.now() });
 
     return response.json();
+
   }
 }
 

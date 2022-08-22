@@ -7,7 +7,7 @@ const { hasDuplicates } = Helpers();
 class NotesController {
   async create(request, response) {
     const { title, description, rating, tags } = request.body;
-    const { user_id } = request.params;
+    const user_id = request.user.id;
 
     // Check if ID is present in database
     const idAlreadyInUse = await knex
@@ -48,28 +48,62 @@ class NotesController {
 
   }
 
+  async update(request, response) {
+    const { note_id, title, rating, description, tags } = request.body;
+    
+    const user_id = request.user.id;
+
+    console.log({ note_id, title, description, rating, tags, user_id });
+
+    await knex('notes')
+      .where({ id: note_id })
+      .update({
+        title,
+        description,
+        rating,
+        updated_at: knex.fn.now()
+    })
+
+    if (tags) {
+      await knex('tags').where({ note_id }).delete();
+
+      const tagsData = tags.map(tag => {
+        return {
+          name: tag,
+          note_id,
+          user_id,
+        }
+      });
+
+      await knex('tags').insert(tagsData);
+    }
+
+    return response.json();
+  }
+
   async show(request, response) {
     const { id } = request.params;
 
-    const note = await knex('notes').where({ id });
+    const note = await knex('notes').where({ id }).first();
 
     const tagsFromNote = await knex('tags').where({note_id: id});
     
     return response.json({
-      note,
+      ...note,
       tags: tagsFromNote
     });
   }
 
   async index(request, response) {
-    const { user_id, title, tags } = request.query;
+    const { title, tags } = request.query;
+    const user_id = request.user.id;
 
     let notes;
     if (title && !tags) {
       notes = await knex('notes')
         .where({ user_id })
         .whereLike('title', `%${title}%`)
-        .orderBy('title');
+        .groupBy('title');
 
     } else if (title && tags) {
 
@@ -89,7 +123,7 @@ class NotesController {
         .whereLike('notes.title', `%${title}%`)
         .whereIn('tags.name', tagsArray)
         .innerJoin('tags', 'notes.id', 'tags.note_id')
-        .orderBy('notes.title');
+        .groupBy('notes.title');
 
     } else if (!title && tags) {
 
@@ -108,20 +142,22 @@ class NotesController {
         .where('notes.user_id', user_id)
         .whereIn('tags.name', tagsArray)
         .innerJoin('tags', 'notes.id', 'tags.note_id')
-        .orderBy('notes.title');
+        .groupBy('notes.title');
 
     } else if (!title && !tags) {
       
       notes = await knex('notes')
         .where({ user_id })
-        .orderBy('title');
+        .groupBy('title');
     }
 
-    const notesWithTags = {};
+    const notesWithTags = [];
     for (let note of notes) {
       const tagsFromNote = await knex('tags').where('note_id', note.id);
-      notesWithTags[note.id] = note;
-      notesWithTags[note.id]['tags'] = tagsFromNote;
+      notesWithTags.push({
+        ...note,
+        tags: tagsFromNote
+      })
     }
 
     return response.json(notesWithTags);
