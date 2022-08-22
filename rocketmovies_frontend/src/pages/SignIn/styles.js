@@ -31,7 +31,7 @@ export const Container = styled.div`
       }
     }
   
-    a {
+    button:nth-child(3) {
       margin-top: -6px;
       font-weight: 400;
       font-size: 1.6rem;

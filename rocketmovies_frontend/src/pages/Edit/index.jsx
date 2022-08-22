@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Container, Content, Form } from './styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import { Header } from '../../components/Header';
 import { FiArrowLeft } from 'react-icons/fi';
@@ -11,15 +11,18 @@ import { NewTag } from '../../components/NewTag';
 import { Button } from '../../components/Button';
 
 import { api } from '../../services/api';
-import { useAuth } from '../../hooks/auth';
 
-export function Create(){
-  const { user } = useAuth();
-  const [title, setTitle] = useState('');
-  const [rating, setRating] = useState('');
-  const [description, setDescription] = useState('');
+export function Edit(){
+  const params = useParams();
+  const [note, setNote] = useState('');
+
+  const [title, setTitle] = useState(note.title);
+  const [rating, setRating] = useState(note.rating);
+  const [description, setDescription] = useState(note.description);
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
+
+  const navigate = useNavigate();
 
   function handleAddTag() {
     if (newTag) {
@@ -31,10 +34,8 @@ export function Create(){
   function handleDeleteTag(tagName) {
     setTags(prevState => prevState.filter((tag) => tag !== tagName));
   }
-
-  async function handleAddMovieData() {
-    console.log({title, rating, description, tags});
-
+  
+  async function handleUpdateMovieData() {
     try {
 
       if (title && rating) {
@@ -43,21 +44,66 @@ export function Create(){
           return alert('Invalid rating value');
         }
 
-        await api.post('/notes', {title, rating, description, tags});
-        alert('Movie registered with success!');
+        console.log({ title, rating, description, tags, note_id: params.id });
+
+        await api.put('/notes', {
+          title,
+          rating,
+          description,
+          tags,
+          note_id: Number(params.id)
+        });
+        alert('Movie updated with success!');
 
       } else {
-        return alert('You cannot register movies with blank titles and/or ratings');
+        return alert('You cannot update movies with blank titles and/or ratings');
       }
 
     } catch(error) {
       if (error.response) {
         alert(error.response.data.message);
       } else {
-        alert('Server unavailable. You could not register this movie.');
+        alert('Server unavailable. You could not update this movie.');
       }
     }
   }
+
+  async function handleDeleteMovieData() {
+
+    const confirm = window.confirm('Are you sure that you want to delete this entry? This action cannot be undone!');
+
+    if (confirm) {
+
+      try {
+        await api.delete(`/notes/${Number(params.id)}`);
+        alert('Movie deleted with success!');
+        navigate('/');
+      } catch(error) {
+        if (error.response) {
+          alert(error.response.data.message);
+        } else {
+          alert('Server unavailable. You could not update this movie.');
+        }
+      }
+  
+    }
+
+  }
+
+  useEffect(() => {
+      async function fetchNote() {
+          const response = await api.get(`/notes/${params.id}`);
+          setNote(response.data);
+
+          setTitle(response.data.title);
+          setRating(response.data.rating);
+          setDescription(response.data.description);
+          setTags(response.data.tags.map(tag => tag.name));
+      }
+
+      fetchNote();
+  }, []);
+
 
   return (
     <Container>
@@ -69,13 +115,14 @@ export function Create(){
         </header>
         
         <Form>
-          <h1>Novo filme</h1>
+          <h1>Editar filme</h1>
           
           <div className="inputArea">
             <Input
               id='title'
               type='text'
               placeholder='Título'
+              defaultValue={note.title}
               onChange={(e) => setTitle(e.target.value)}
             />
             <Input
@@ -84,11 +131,13 @@ export function Create(){
               min='0'
               max='5'
               placeholder='Sua nota (de 0 a 5)'
+              defaultValue={note.rating}
               onChange={(e) => setRating(e.target.value)}
             />
             <TextArea
               id='observations'
               placeholder='Observações'
+              defaultValue={note.description}
               onChange={(e) => setDescription(e.target.value)}
             />
           </div>
@@ -122,11 +171,12 @@ export function Create(){
             <Button
               title='Excluir filme'
               isDelete
-              enabled={false}
+              onClick={handleDeleteMovieData}
+              enabled={true}
             />
             <Button
-              title='Salvar filme'
-              onClick={handleAddMovieData}
+              title='Editar filme'
+              onClick={handleUpdateMovieData}
               enabled={title && rating ? true: false}
             />
           </div>

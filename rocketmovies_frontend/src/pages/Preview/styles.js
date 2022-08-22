@@ -3,15 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 100vh;
-
+    
     display: grid;
+    grid-template-rows: 11.6rem auto;
     grid-template-areas:
     'header'
     'content';
 `;
 
 export const Content = styled.div`
+    /* height: 100vh; */
     grid-area: content;
+
     overflow-y: auto;
     max-width: 113.7rem;
     margin: 0 auto;
@@ -22,14 +25,21 @@ export const Content = styled.div`
     > header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+       
+        > div {
+            display: flex;
+            align-items: center;
 
-        color: ${({ theme }) => theme.COLORS.PINK_100};
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.1rem;
-
-        > a {
+            > a {
+                color: ${({ theme }) => theme.COLORS.PINK_100};
+                font-weight: 400;
+                font-size: 1.6rem;
+                line-height: 2.1rem;
+            }
+    
             color: ${({ theme }) => theme.COLORS.PINK_100};
+            
         }
     }
 

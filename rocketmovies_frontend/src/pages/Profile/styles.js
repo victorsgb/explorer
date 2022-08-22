@@ -45,13 +45,31 @@ export const Form = styled.div`
     flex-direction: column;
     justify-content: center;
 
-    > img {
-        width: 18.6rem;
-        height: 18.6rem;
-        border-radius: 50%;
-        border-bottom: 2px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    .img-wrapper {
 
-        margin: -10.0rem auto 0;
+        margin: 0 auto;
+        position: relative;
+
+        img {
+            width: 18.6rem;
+            height: 18.6rem;
+            border-radius: 50%;
+            border-bottom: 2px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
+   
+            margin: -10.0rem auto 0;
+        }
+
+        button {
+            padding: 0;
+            margin: 0;
+            width: 4.0rem;
+            height: 4.0rem;
+            border-radius: 50%;
+
+            position: absolute;
+            right: 1.0rem;
+            top: 4.0rem;
+        }
     }
 
     > #username {
@@ -65,4 +83,10 @@ export const Form = styled.div`
     > button {
         margin: 2.4rem 0 0.3rem;
     }
+
+    @media (max-width: 650px) {
+        padding: 0 3.0rem;        
+    }
+
+
 `;

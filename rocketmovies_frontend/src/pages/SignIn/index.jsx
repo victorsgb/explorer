@@ -1,12 +1,27 @@
+import { useState } from 'react';
+
 import { Container, Form, Background } from './styles';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Input } from '../../components/Input';
 import { FiMail, FiLock } from 'react-icons/fi';
 
 import { Button } from '../../components/Button';
+import { ButtonText } from '../../components/ButtonText';
 
-export function SignIn(){
+import { useAuth } from '../../hooks/auth';
+
+export function SignIn() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  
+  const { signIn } = useAuth();
+  const navigate = useNavigate();
+
+  function handleSignIn() {
+    signIn({email, password});   
+  }
+
   return (
     <Container>
       
@@ -22,20 +37,28 @@ export function SignIn(){
             type='text' 
             placeholder='E-mail' 
             icon={ FiMail }
+            onChange={e => setEmail(e.target.value)}
           />
           <Input
             type='password' 
             placeholder='Senha' 
             icon={ FiLock }
+            onChange={e => setPassword(e.target.value)}
           />
 
-          <Button title='Entrar' />
+          <Button
+            title='Entrar'
+            onClick={handleSignIn}
+          />
 
         </Form>
         
-        <Link to='/signup'>
-          Criar conta
-        </Link>
+        <ButtonText
+          className='button-text'
+          title='Criar conta'
+          onClick={() => navigate('/signup')}
+        />
+        
       </section>
       <Background />
 

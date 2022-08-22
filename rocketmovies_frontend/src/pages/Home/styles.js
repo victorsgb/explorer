@@ -17,6 +17,15 @@ export const Container = styled.div`
     margin: 0 auto;
   }
 
+  .emptyList {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    color: ${({ theme }) => theme.COLORS.PINK_100}
+  }
 `;
 
 export const Title = styled.div`
@@ -25,14 +34,14 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  
   > h1 {
     font-weight: 400;
     font-size: 3.2rem;
     line-height: 4.2rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
-
+  
   > button {
     max-width: 20.7rem;
   }
@@ -43,6 +52,7 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
+  padding: 0 3.2rem;
 
   > ul {
     display: flex;

@@ -19,5 +19,12 @@ export const Container = styled.div`
 
   > input {
     width: 100%;
-  } 
+
+    &:out-of-range {
+      background-color: ${({ theme }) => theme.COLORS.PINK_900};
+
+      color: ${({ theme }) => theme.COLORS.PINK_100};
+    }
+  }
+
 `;
