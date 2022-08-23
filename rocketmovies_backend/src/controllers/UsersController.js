@@ -74,8 +74,6 @@ class UsersController {
 
       const emailChanged = email !== registeredEmail.email;
 
-      console.log({name, email, password, new_password});
-
       if (emailChanged) {
         throw new AppError('user-error/email-update-trial-without-password');
       }      

@@ -10,16 +10,24 @@ class NotesController {
     const user_id = request.user.id;
 
     // Check if ID is present in database
-    const idAlreadyInUse = await knex
+    const idFound = await knex
       .select('id').from('users')
       .where({ id: user_id }).first();
-    if (!idAlreadyInUse) {
+    if (!idFound) {
       throw new AppError('user-error/id-not-found');
     }
 
     // Check if tags are distinct, if there are some
     if (hasDuplicates(tags)) {    
       throw new AppError('error-user/not-unique-tags');
+    }
+
+    // Check if title is already present in database
+    const noteFound = await knex
+      .select('title').from('notes')
+      .where({ title }).first();
+    if (noteFound) {
+      throw new AppError('user-error/movie-already-registered');
     }
 
     const note_id = await knex('notes').insert({
@@ -42,7 +50,7 @@ class NotesController {
       await knex('tags').insert(tagsData);
 
       return response.json({
-        title, description, rating, user_id, tags: tagsData
+        title, description, rating, note_id, user_id, tags: tagsData
       });
     }
 
@@ -52,8 +60,6 @@ class NotesController {
     const { note_id, title, rating, description, tags } = request.body;
     
     const user_id = request.user.id;
-
-    console.log({ note_id, title, description, rating, tags, user_id });
 
     await knex('notes')
       .where({ id: note_id })
