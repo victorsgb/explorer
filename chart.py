@@ -20,10 +20,11 @@ finishing_dates = [
     date(2022, 7, 15),  # When I finished Stage 07
     date(2022, 8, 2),  # When I finished Stage 08
     date(2022, 8, 10),  # When I finished Stage 09
-    date(2022, 8, 15),  # Expected to finish Stage 10
+    date(2022, 8, 22),  # When I finished Stage 10
+    date(2022, 8, 26)  # Expected to finish Stage 11
 ]
 
-accumulated_progress = [0, .18, .27, .36, .45, .54, .63, .72, .81, .90]
+accumulated_progress = [0, .16, .25, .33, .42, .5, .58, .67, .75, .83, .92]
 
 fig, ax = plt.subplots(1, 1, dpi=300)
 
@@ -96,7 +97,11 @@ ax.text(
     fontdict=text_font
 )
 ax.text(
-    mdates.date2num(finishing_dates[9]) - 16, accumulated_progress[9] + 0.005, 'in progress...',
+    mdates.date2num(finishing_dates[9]) - 12, accumulated_progress[9] + 0.01, 'stage 10',
+    fontdict=text_font
+)
+ax.text(
+    mdates.date2num(finishing_dates[10]) - 16, accumulated_progress[10] + 0.005, 'in progress...',
     fontdict=text_font
 )
 

@@ -18,7 +18,7 @@
 </p>
 <h4 align="center">
 	Status: 🚧 In Construction
-       <p> ████████▁▁▁ &nbsp;73% </p>
+       <p> █████████▁▁ &nbsp;83% </p>
 </h4>
 
 ---
@@ -48,8 +48,8 @@ The repository you see is primarily intended to record my development into a ful
 <img src="https://simpleicons.org/icons/insomnia.svg" alt="Insomnia Badge" height="25"/>
 <img src="https://simpleicons.org/icons/sqlite.svg" alt="SQLite Badge" height="25"/>
 <img src="https://simpleicons.org/icons/express.svg" alt="Express Badge" height="25"/>
----
-## Contact
+
+### Contact
 Feel free to stay in touch with me. I would be very happy to hear from you! Also, I am very interested in learning and sharing what I have learned so far!
 
 <a href="https://www.linkedin.com/in/victorsgb" target="_blank"><img src="https://img.shields.io/badge/victorsgb-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn Badge" height="25"></a>&nbsp;

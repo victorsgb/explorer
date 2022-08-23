@@ -4,7 +4,7 @@
 
 ---
 
-📅 **Aug 10th, 2022**
+📅 **Aug 22th, 2022**
 
 ⏳ **Status:** Finished ✔️
 
@@ -16,6 +16,7 @@
 >
 > Depedencies in production:
 >
+>>    "axios": "^0.27.2"
 >>    "react": "^18.2.0",
 >>    "react-dom": "^18.2.0",
 >>    "react-icons": "^4.4.0",
