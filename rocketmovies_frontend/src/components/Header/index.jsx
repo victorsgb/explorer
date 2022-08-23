@@ -7,6 +7,7 @@ import { ButtonText} from '../ButtonText';
 
 import { useAuth } from '../../hooks/auth';
 
+import { api } from '../../services/api';
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
 
 export function Header(){
@@ -14,6 +15,8 @@ export function Header(){
   const [search, setSearch] = useState('');
 
   const navigate = useNavigate();
+
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   function handleSignOut() {
     signOut();
@@ -44,6 +47,7 @@ export function Header(){
       <div>
         <div>
           <span>{user.name}</span>
+         
           <ButtonText
             title='sair'
             onClick={handleSignOut}
@@ -51,7 +55,7 @@ export function Header(){
         </div>
         <Link to='/profile'>
           <img
-           src={avatarPlaceholder}
+           src={avatarURL}
            alt={`Imagem de ${user.name}`}
           />
         </Link>

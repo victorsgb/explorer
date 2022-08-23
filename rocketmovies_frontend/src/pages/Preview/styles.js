@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-    /* height: 100vh; */
+    width: 100vw;
     grid-area: content;
 
     overflow-y: auto;
@@ -47,6 +47,13 @@ export const Content = styled.div`
         display: flex;
         gap: 8px;
         margin-bottom: 4.0rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        div {
+            height: 100%;
+            align-self: center;
+        }
     }
 
     > h2 {
@@ -94,12 +101,13 @@ export const TitleAndRating = styled.div`
 
 export const Description = styled.div`
     display: flex;
+    align-items: center;
     gap: 1.0rem;
     margin-bottom: 4.0rem;
 
     > img {
-        width: 1.6rem;
-        height: 1.6rem;
+        width: 2.6rem;
+        height: 2.6rem;
         border-radius: 50%;
         border: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_500};
     }

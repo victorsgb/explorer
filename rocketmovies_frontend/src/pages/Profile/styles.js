@@ -59,16 +59,62 @@ export const Form = styled.div`
             margin: -10.0rem auto 0;
         }
 
-        button {
-            padding: 0;
-            margin: 0;
-            width: 4.0rem;
-            height: 4.0rem;
-            border-radius: 50%;
-
+        label {
             position: absolute;
             right: 1.0rem;
             top: 4.0rem;
+            
+            width: 4.0rem;
+            height: 4.0rem;
+            border-radius: 50%;
+            border: 1px solid ${({ theme }) => theme.COLORS.PINK_100};
+            background-color: ${({ theme }) => theme.COLORS.PINK_100};
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: all 200ms;
+            
+            cursor: pointer;
+
+            &:hover, &:focus {
+                background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+
+                svg {
+                    color: ${({ theme }) => theme.COLORS.PINK_100};;
+                }
+            }
+
+            input {
+                
+                &::-webkit-file-upload-button {
+                   visibility: hidden;
+                }
+
+                &:hover, &:focus {
+                    opacity: 0.8;
+                    width: 4.0rem;
+                    height: 4.0rem;
+                    border-radius: 50%;
+                    background: none;
+                    border: none;                   
+
+                    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+                }
+ 
+            }
+
+            svg {
+                position: absolute;
+
+                color: ${({ theme }) => theme.COLORS.BACKGROUND_600};;
+
+                height: 1.5rem;
+                width: 1.8rem;
+                cursor: pointer;
+
+            }
         }
     }
 

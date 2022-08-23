@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Container, Content, Form } from './styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Header } from '../../components/Header';
 import { FiArrowLeft } from 'react-icons/fi';
@@ -21,6 +21,8 @@ export function Create(){
   const [tags, setTags] = useState([]);
   const [newTag, setNewTag] = useState('');
 
+  const navigate = useNavigate();
+
   function handleAddTag() {
     if (newTag) {
       setTags(prevState => [...prevState, newTag]);
@@ -33,7 +35,6 @@ export function Create(){
   }
 
   async function handleAddMovieData() {
-    console.log({title, rating, description, tags});
 
     try {
 
@@ -43,11 +44,13 @@ export function Create(){
           return alert('Invalid rating value');
         }
 
-        await api.post('/notes', {title, rating, description, tags});
+        const response = await api.post('/notes', {title, rating, description, tags});
         alert('Movie registered with success!');
 
+        navigate(`/edit/${response.data.note_id}`);
+
       } else {
-        return alert('You cannot register movies with blank titles and/or ratings');
+        return alert('You cannot register movies with blank information');
       }
 
     } catch(error) {
@@ -127,7 +130,7 @@ export function Create(){
             <Button
               title='Salvar filme'
               onClick={handleAddMovieData}
-              enabled={title && rating ? true: false}
+              enabled={title && rating && description ? true: false}
             />
           </div>
         </Form>

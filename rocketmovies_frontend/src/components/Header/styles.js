@@ -40,6 +40,12 @@ export const Container = styled.div`
     border: 3px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
   }
 
+  > div div button {
+    &:focus {
+      outline: none;
+    }
+  }
+
   @media (max-width: 650px) {
     padding-right: 0;
     gap: 1.4rem;

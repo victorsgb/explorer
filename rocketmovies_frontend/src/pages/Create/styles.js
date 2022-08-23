@@ -17,6 +17,8 @@ export const Content = styled.div`
   grid-area: content;
   overflow-y: auto;
 
+  padding: 0 1.0rem 0 1.0rem;
+
   > header {
 
     display: flex;

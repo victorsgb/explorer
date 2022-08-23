@@ -7,9 +7,10 @@ import { Header } from '../../components/Header';
 import { FiArrowLeft, FiArrowRight, FiClock } from 'react-icons/fi';
 import { Tag } from '../../components/Tag';
 import { Rating } from '../../components/Rating';
-import { api } from '../../services/api';
 
+import { api } from '../../services/api';
 import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+
 import { useAuth } from '../../hooks/auth';
 
 export function Preview(){
@@ -17,6 +18,8 @@ export function Preview(){
     const { user } = useAuth();
         
     const [note, setNote] = useState('');
+
+    const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
     useEffect(() => {
         async function fetchNote() {
@@ -45,11 +48,10 @@ export function Preview(){
                 <TitleAndRating>
                     <h1>{note.title}</h1>
                     <Rating value={note.rating} size={25} />
-
                 </TitleAndRating>
                 <Description>
                     <img
-                        src={avatarPlaceholder}
+                        src={avatarURL}
                         alt={`Imagem de ${user.name}`}
                     />
                     <p>Por <span>{user.name}</span></p>

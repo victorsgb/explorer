@@ -24,10 +24,24 @@ export const Container = styled.div`
     line-height: 1.8rem;
     text-transform: capitalize;
     color: ${({ theme, isNew }) => isNew ? theme.COLORS.GRAY_500 : theme.COLORS.WHITE};
+
+    &:focus, &:hover {
+      box-shadow: none;
+      color: ${({ theme }) => theme.COLORS.PINK_100};
+
+      &::placeholder {
+        color: ${({ theme }) => theme.COLORS.PINK_100};
+      }
+    }
   }
 
   > button {
     cursor: pointer;
-    color: ${({ theme }) => theme.COLORS.PINK_100};    
+    color: ${({ theme }) => theme.COLORS.PINK_100};   
+    
+    &:focus, &:hover {
+      outline: none;
+      box-shadow: 0 0 1.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900}, inset -1px -2px 1.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900};    
+    }   
   }
 `;

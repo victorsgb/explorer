@@ -44,8 +44,6 @@ export function Edit(){
           return alert('Invalid rating value');
         }
 
-        console.log({ title, rating, description, tags, note_id: params.id });
-
         await api.put('/notes', {
           title,
           rating,
@@ -175,7 +173,7 @@ export function Edit(){
               enabled={true}
             />
             <Button
-              title='Editar filme'
+              title='Salvar alterações'
               onClick={handleUpdateMovieData}
               enabled={title && rating ? true: false}
             />

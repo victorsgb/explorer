@@ -30,6 +30,9 @@ export const Container = styled.button`
   > footer {
     display: flex;
     gap: 8px;
-  }
 
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 `;

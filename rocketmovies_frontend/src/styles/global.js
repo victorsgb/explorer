@@ -19,7 +19,7 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
-  button, input, textarea { 
+  input, textarea, img { 
     font-family: 'Roboto Slab', serif;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     font-size: 1.4rem;
@@ -28,19 +28,45 @@ export default createGlobalStyle`
     border: none;
     outline: none;
 
+    transition: all 200ms;
+
     &::placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_500}
     }
+
+    &:focus, &:hover {
+      /* outline: 16px solid ${({ theme }) => theme.COLORS.PINK_900}; */
+      box-shadow: 0 0 1.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900}, inset -1px -2px 108.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900};
+    } 
+  }
+
+  button { 
+    font-family: 'Roboto Slab', serif;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    font-size: 1.4rem;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    transition: all 200ms;
   }
 
   a {
     color: ${({ theme }) => theme.COLORS.GRAY_500};
     text-decoration: none;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 1.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900}, inset -1px -2px 108.6rem 1rem ${({ theme }) => theme.COLORS.PINK_900};
+    }
   }
 
-  a:hover, button:hover {
-    filter: brightness(1.1);
-  }
+
 
 /* ===== Scrollbar CSS ===== */
   /* Firefox */

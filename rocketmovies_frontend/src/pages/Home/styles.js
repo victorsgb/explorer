@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 
   display: grid;
   grid-template-rows: 11.6rem auto;
@@ -30,6 +31,7 @@ export const Container = styled.div`
 
 export const Title = styled.div`
   padding: 5.0rem 10.6rem;
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
@@ -53,6 +55,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   padding: 0 3.2rem;
+  width: 100vw;
 
   > ul {
     display: flex;
