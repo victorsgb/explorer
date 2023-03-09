@@ -60,7 +60,7 @@ main {
         grid-template-areas:
         "repo-description repo-description"
         "major-projects major-projects"
-        "whats-next whats-next"
+        "history history"
         "stacks contact";
 
         gap: 1.0rem;
@@ -75,8 +75,8 @@ main {
         grid-area: major-projects;
     }
 
-    main #whats-next {
-        grid-area: whats-next;
+    main #history {
+        grid-area: history;
     }
 
     main #stacks {
@@ -105,7 +105,7 @@ main {
         grid-template-areas:
         
         "repo-description repo-description repo-description"
-        "major-projects whats-next whats-next"
+        "major-projects history history"
         "major-projects stacks contact"; 
         
         gap: 1.0rem;
@@ -119,8 +119,8 @@ main {
         grid-area: major-projects;
     }
 
-    main #whats-next {
-        grid-area: whats-next;
+    main #history {
+        grid-area: history;
     }
 
     main #stacks {
@@ -337,7 +337,7 @@ main section ul li {
 
     border: 2px solid var(--bg-primary-medium);
     border-radius: 8px;
-    padding: 3px;
+    padding: 3px;   
 }
 
 main section ul li a:nth-child(3) {
@@ -453,7 +453,7 @@ footer a:hover {
 }
 
 main #contact p,
-main #whats-next p {
+main #history p {
     grid-area: section-description;
 
     font-size: 1.6rem;
@@ -521,7 +521,7 @@ main #contact .contact-badges {
     filter: brightness(2.5);
 }
 
-main #whats-next {
+main #history {
     grid-template-columns: 3.0rem 1fr;
     grid-template-rows: 0.1fr 0.2fr 0.8fr;
     grid-template-areas: "section-icon section-title"
@@ -529,15 +529,15 @@ main #whats-next {
     "section-content section-content";
 }
 
-main #whats-next p {
+main #history p {
     grid-area: section-description;
 }
 
-main #whats-next #chart {
+main #history #chart {
     grid-area: section-content;
 }
 
-main #whats-next #chart img {
+main #history #chart img {
     width: 100%;
     height: 100%;
 }
@@ -550,11 +550,11 @@ main #whats-next #chart img {
     filter: hue-rotate(calc(var(--hue) * 1deg + 194deg)) invert(100%);
 }
 
-main #whats-next:hover .img-in-light-mode {
+main #history:hover .img-in-light-mode {
     filter:grayscale(1);
 }
 
-main #whats-next:hover .img-in-dark-mode {
+main #history:hover .img-in-dark-mode {
     filter:grayscale(1) invert(100%);
 }
 

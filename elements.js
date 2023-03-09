@@ -6,7 +6,7 @@ export function Elements(){
 
   let main = body.querySelector("main");
 
-  let img = main.querySelector("#whats-next #chart img");
+  let img = main.querySelector("#history #chart img");
 
   const lightModeButton = body.querySelector(".light-mode");
   const darkModeButton = body.querySelector(".dark-mode");
